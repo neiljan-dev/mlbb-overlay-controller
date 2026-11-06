@@ -1,9 +1,21 @@
-﻿<Application x:Class="overlay_controller_mlbb.App"
+﻿<Application x:Class="MlbbOverlay.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:overlay_controller_mlbb"
-             StartupUri="MainWindow.xaml">
+             xmlns:vm="clr-namespace:MlbbOverlay.ViewModels"
+             xmlns:views="clr-namespace:MlbbOverlay.Views">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/Dark.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- "When you see this ViewModel, draw this View" -->
+            <DataTemplate DataType="{x:Type vm:MainMenuViewModel}">
+                <views:MainMenuView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:PlaceholderViewModel}">
+                <views:PlaceholderView/>
+            </DataTemplate>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

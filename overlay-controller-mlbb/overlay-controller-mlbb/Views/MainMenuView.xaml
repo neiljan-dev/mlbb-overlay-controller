@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="MlbbOverlay.Views.MainMenuView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="420">
+            <TextBlock Text="MLBB OVERLAY CONTROLLER" Style="{StaticResource TitleText}"
+                       HorizontalAlignment="Center"/>
+            <TextBlock Text="Tournament overlays for OBS Studio" Style="{StaticResource MutedText}"
+                       HorizontalAlignment="Center" Margin="0,4,0,32"/>
+
+            <Button Content="Controller" Command="{Binding OpenControllerCommand}"
+                    Style="{StaticResource MenuButton}"/>
+            <Button Content="Database" Command="{Binding OpenDatabaseCommand}"
+                    Style="{StaticResource MenuButton}"/>
+            <Button Content="Design x Animation" Command="{Binding OpenDesignCommand}"
+                    Style="{StaticResource MenuButton}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

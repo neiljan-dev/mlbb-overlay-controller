@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("overlay-controller-mlbb")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Controller")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("overlay-controller-mlbb")]
-[assembly: System.Reflection.AssemblyTitleAttribute("overlay-controller-mlbb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+27b267a236c991830e8690034427a7a20f0cf963")]
+[assembly: System.Reflection.AssemblyProductAttribute("Controller")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Controller")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]
