@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "overlay-controller-mlbb/1.0.0": {
+        "runtime": {
+          "overlay-controller-mlbb.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "overlay-controller-mlbb/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
