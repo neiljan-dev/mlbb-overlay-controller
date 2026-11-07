@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
+		<NoWarn>$(NoWarn);WPF0001</NoWarn>
 		<OutputType>WinExe</OutputType>
 		<TargetFramework>net10.0-windows</TargetFramework>
 		<Nullable>enable</Nullable>
@@ -11,19 +12,32 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <None Remove="Asssets\return.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Data\" />
-	  <Folder Include="NewFolder\" />
 	  <Folder Include="wwwroot\handcoded\" />
 	  <Folder Include="wwwroot\lib\" />
-	  <Folder Include="wwwroot\overlay\" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.14" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.14">
+	    <PrivateAssets>all</PrivateAssets>
+	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+	  <PackageReference Include="obs-websocket-dotnet" Version="5.7.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Resource Include="Asssets\return.png">
+	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	  </Resource>
 	</ItemGroup>
 
 	<ItemGroup>

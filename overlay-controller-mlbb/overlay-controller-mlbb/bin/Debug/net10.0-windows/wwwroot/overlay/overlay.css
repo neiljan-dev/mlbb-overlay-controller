@@ -1,0 +1,47 @@
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: transparent;
+}
+
+/* The fixed 1920x1080 canvas. JavaScript scales it to fit the window. */
+#stage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1920px;
+  height: 1080px;
+  transform-origin: top left;
+}
+
+.layer { position: absolute; inset: 0; }
+#layer-base  { z-index: 1; }   /* persistent overlays */
+#layer-event { z-index: 2; }   /* short overlays, always above the base */
+
+/* One shown overlay */
+.ov {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1920px;
+  height: 1080px;
+  animation: ovIn 0.4s ease both;
+}
+.ov.leaving { animation: ovOut 0.4s ease both; }
+
+@keyframes ovIn  { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+@keyframes ovOut { from { opacity: 1; } to { opacity: 0; transform: translateY(-12px); } }
+
+#debug {
+  position: fixed;
+  right: 8px;
+  bottom: 8px;
+  z-index: 99;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  font: 14px "Segoe UI", Arial, sans-serif;
+}

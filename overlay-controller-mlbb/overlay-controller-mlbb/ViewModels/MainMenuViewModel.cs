@@ -12,13 +12,12 @@ public partial class MainMenuViewModel : ObservableObject
     {
         _navigator = navigator;
     }
-    [RelayCommand]
-    private void OpenController() =>
-        _navigator.NavigateTo(new PlaceholderViewModel("Controller", "Coming in Milestones 3 to 7", _navigator));
 
     [RelayCommand]
-    private void OpenDatabase() =>
-        _navigator.NavigateTo(new PlaceholderViewModel("Database", "Coming in Milestone 2", _navigator));
+    private void OpenController() => _navigator.Navigate<TeamSetupViewModel>();
+
+    [RelayCommand]
+    private void OpenDatabase() => _navigator.Navigate<DatabaseViewModel>();
 
     [RelayCommand]
     private void OpenDesign() =>

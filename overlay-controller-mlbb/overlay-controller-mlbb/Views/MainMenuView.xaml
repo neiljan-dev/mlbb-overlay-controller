@@ -2,17 +2,17 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Grid>
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="420">
-            <TextBlock Text="MLBB OVERLAY CONTROLLER" Style="{StaticResource TitleText}"
-                       HorizontalAlignment="Center"/>
-            <TextBlock Text="Tournament overlays for OBS Studio" Style="{StaticResource MutedText}"
+        <TextBlock Text="MLBB OVERLAY CONTROLLER" FontFamily="Bahnschrift" Style="{StaticResource TitleText}"
+                       HorizontalAlignment="Center" Height="350"/>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="320">
+            <TextBlock Text="Made by Neiljan" FontSize="12" Style="{StaticResource MutedText}"
                        HorizontalAlignment="Center" Margin="0,4,0,32"/>
 
-            <Button Content="Controller" Command="{Binding OpenControllerCommand}"
+            <Button Content="Controller" FontFamily="Bahnschrift" Command="{Binding OpenControllerCommand}"
                     Style="{StaticResource MenuButton}"/>
-            <Button Content="Database" Command="{Binding OpenDatabaseCommand}"
+            <Button Content="Database" FontFamily="Bahnschrift" Command="{Binding OpenDatabaseCommand}"
                     Style="{StaticResource MenuButton}"/>
-            <Button Content="Design x Animation" Command="{Binding OpenDesignCommand}"
+            <Button Content="Design x Animation" FontFamily="Bahnschrift" Command="{Binding OpenDesignCommand}"
                     Style="{StaticResource MenuButton}"/>
         </StackPanel>
     </Grid>

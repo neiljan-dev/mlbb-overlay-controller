@@ -23,4 +23,4 @@ public static class AppPaths
         Directory.CreateDirectory(LogoImages);
         Directory.CreateDirectory(OverlayAssets);
     }
-}s
+}

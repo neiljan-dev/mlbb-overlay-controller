@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET10_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NET10_0_OR_GREATER;NETCOREAPP1_0_OR_GREATER;NETCOREAPP1_1_OR_GREATER;NETCOREAPP2_0_OR_GREATER;NETCOREAPP2_1_OR_GREATER;NETCOREAPP2_2_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\neilb\OneDrive\Documents\_Project\MLBB\mlbb-overlay-controller\overlay-controller-mlbb\overlay-controller-mlbb\App.xaml
-41380258172
+11730390381
 
-24-1043317945
-345-36814543
-MainWindow.xaml;Themes\Dark.xaml;Views\MainMenuView.xaml;Views\PlaceholderView.xaml;
+60-420754445
+3591511472653
+MainWindow.xaml;Themes\Dark.xaml;Views\ConnectionWindow.xaml;Views\DatabaseView.xaml;Views\HeroEditWindow.xaml;Views\HeroPickerWindow.xaml;Views\InputWindow.xaml;Views\MainMenuView.xaml;Views\PlaceholderView.xaml;Views\TeamEditorView.xaml;Views\TeamSetupView.xaml;
 
 False
 

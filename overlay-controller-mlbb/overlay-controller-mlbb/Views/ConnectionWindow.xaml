@@ -1,0 +1,92 @@
+﻿<Window x:Class="MlbbOverlay.Views.ConnectionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="OBS and Overlay Server" Width="600" SizeToContent="Height" MaxHeight="700"
+        WindowStartupLocation="CenterOwner" ResizeMode="NoResize"
+        Background="{StaticResource BgBrush}" Foreground="{StaticResource TextBrush}">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="28">
+
+            <!-- Overlay server -->
+            <TextBlock Text="Overlay server" FontSize="16" FontWeight="Bold"
+                       Foreground="{StaticResource AccentBrush}"/>
+            <TextBlock Text="{Binding Server.StatusText}" Style="{StaticResource MutedText}" Margin="0,6,0,12"/>
+
+            <TextBlock Text="Browser Source URL for OBS (width 1920, height 1080):"
+                       Style="{StaticResource MutedText}"/>
+            <Grid Margin="0,4,0,8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBox Height="34" IsReadOnly="True" VerticalContentAlignment="Center"
+                         Text="{Binding OverlayUrl, Mode=OneWay}"/>
+                <Button Grid.Column="1" Content="Copy" Style="{StaticResource SmallButton}"
+                        Margin="8,0,0,0" Command="{Binding CopyUrlCommand}"/>
+            </Grid>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                <TextBlock Text="Overlay pages connected: " Style="{StaticResource MutedText}"/>
+                <TextBlock Text="{Binding Server.Clients.Count}" FontWeight="SemiBold"/>
+                <TextBlock Text="  (1 or more means OBS is loading the page)" Style="{StaticResource MutedText}"/>
+            </StackPanel>
+
+            <TextBlock Text="Server port (restart the app after changing)" Style="{StaticResource MutedText}"/>
+            <TextBox Width="120" Height="34" HorizontalAlignment="Left" Margin="0,4,0,24"
+                     VerticalContentAlignment="Center" Text="{Binding ServerPort}"/>
+
+            <!-- OBS connection -->
+            <TextBlock Text="OBS WebSocket" FontSize="16" FontWeight="Bold"
+                       Foreground="{StaticResource AccentBrush}"/>
+            <StackPanel Orientation="Horizontal" Margin="0,6,0,12">
+                <Ellipse Style="{StaticResource ObsDot}" Margin="0,0,8,0"/>
+                <TextBlock Text="{Binding Obs.StatusText}" Style="{StaticResource MutedText}"/>
+            </StackPanel>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="16"/>
+                    <ColumnDefinition Width="120"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel>
+                    <TextBlock Text="Host" Style="{StaticResource MutedText}"/>
+                    <TextBox Height="34" Margin="0,4,0,0" VerticalContentAlignment="Center"
+                             Text="{Binding ObsHost}"/>
+                </StackPanel>
+                <StackPanel Grid.Column="2">
+                    <TextBlock Text="Port" Style="{StaticResource MutedText}"/>
+                    <TextBox Height="34" Margin="0,4,0,0" VerticalContentAlignment="Center"
+                             Text="{Binding ObsPort}"/>
+                </StackPanel>
+            </Grid>
+
+            <TextBlock Text="Password" Style="{StaticResource MutedText}" Margin="0,12,0,0"/>
+            <PasswordBox x:Name="PasswordInput" Height="34" Margin="0,4,0,12"
+                         VerticalContentAlignment="Center" PasswordChanged="Password_Changed"/>
+
+            <CheckBox Content="Connect to OBS automatically (and reconnect if it drops)"
+                      IsChecked="{Binding AutoConnect}"/>
+
+            <Button Content="Save and connect" Style="{StaticResource AccentButton}"
+                    HorizontalAlignment="Left" Margin="0,14,0,0" Command="{Binding SaveAndConnectCommand}"/>
+
+            <!-- Test -->
+            <TextBlock Text="Test the overlay" FontSize="16" FontWeight="Bold"
+                       Foreground="{StaticResource AccentBrush}" Margin="0,28,0,8"/>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Show test (stays)" Style="{StaticResource SmallButton}"
+                        Command="{Binding ShowTestStaysCommand}"/>
+                <Button Content="Show test (3 seconds)" Style="{StaticResource SmallButton}"
+                        Margin="8,0,0,0" Command="{Binding ShowTestThreeSecondsCommand}"/>
+                <Button Content="Hide all" Style="{StaticResource SmallButton}"
+                        Margin="8,0,0,0" Command="{Binding HideAllCommand}"/>
+            </StackPanel>
+
+            <TextBlock Text="{Binding Message}" Foreground="#F5A623" TextWrapping="Wrap" Margin="0,16,0,0"/>
+
+            <Button Content="Close" Style="{StaticResource SmallButton}"
+                    HorizontalAlignment="Right" Margin="0,16,0,0" Click="Close_Click"/>
+        </StackPanel>
+    </ScrollViewer>
+</Window>
