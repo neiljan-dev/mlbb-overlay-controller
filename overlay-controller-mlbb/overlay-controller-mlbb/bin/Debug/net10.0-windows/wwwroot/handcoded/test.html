@@ -1,55 +1,159 @@
 <style>
-  .t-card {
-    position: absolute; left: 50%; top: 80px; transform: translateX(-50%);
-    width: 900px; padding: 28px 36px; border-radius: 20px;
-    background: rgba(15, 17, 21, 0.9); border: 2px solid #4c8dff;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-    font-family: "Segoe UI", Arial, sans-serif; color: #fff;
-  }
-  .t-title { text-align: center; font-size: 34px; font-weight: 800; letter-spacing: 3px; color: #4c8dff; }
-  .t-row { display: flex; align-items: center; justify-content: space-between; margin-top: 22px; }
-  .t-side { display: flex; align-items: center; gap: 16px; width: 380px; font-size: 36px; font-weight: 700; }
-  .t-side.t-red { flex-direction: row-reverse; text-align: right; color: #ff6b6b; }
-  .t-side.t-blue { color: #5aa9ff; }
-  .t-logo { width: 84px; height: 84px; object-fit: contain; }
-  .t-vs { font-size: 28px; color: #8a91a3; }
-  .t-players { display: flex; justify-content: space-between; margin-top: 20px; font-size: 22px; color: #cfd4e0; }
-  .t-col div { margin-top: 4px; }
-  .t-col.t-right { text-align: right; }
-  .t-foot { margin-top: 18px; text-align: center; font-size: 20px; color: #8a91a3; }
+	.t-card {
+	position: absolute; left: 50%; top: 60px; transform: translateX(-50%);
+	width: 1000px; padding: 26px 36px; border-radius: 20px;
+	background: rgba(15, 17, 21, 0.9); border: 2px solid #4c8dff;
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+	font-family: "Segoe UI", Arial, sans-serif; color: #fff;
+	}
+	.t-title { text-align: center; font-size: 32px; font-weight: 800; letter-spacing: 3px; color: #4c8dff; }
+	.t-row { display: flex; align-items: center; justify-content: space-between; margin-top: 20px; }
+	.t-side { display: flex; align-items: center; gap: 16px; width: 420px; font-size: 34px; font-weight: 700; }
+	.t-side.t-red { flex-direction: row-reverse; text-align: right; color: #ff6b6b; }
+	.t-side.t-blue { color: #5aa9ff; }
+	.t-logo { width: 80px; height: 80px; object-fit: contain; }
+	.t-vs { font-size: 26px; color: #8a91a3; }
+
+	.t-draft { display: flex; justify-content: space-between; margin-top: 22px; }
+	.t-team { width: 420px; }
+	.t-team.t-right { text-align: right; }
+	.t-slots { display: flex; gap: 8px; }
+	.t-right .t-slots { justify-content: flex-end; }
+	.t-slot { width: 72px; height: 72px; border: 2px solid #2a2f3b; border-radius: 10px; overflow: hidden; background: #0f1115; }
+	.t-slot img, .t-ban img { width: 100%; height: 100%; object-fit: cover; display: block; }
+	.t-ban { width: 48px; height: 48px; border: 2px solid #2a2f3b; border-radius: 50%; overflow: hidden; background: #0f1115; }
+	.t-bans { margin-top: 12px; }
+	.t-label { margin-bottom: 6px; font-size: 14px; letter-spacing: 2px; color: #8a91a3; }
+
+	.t-players { display: flex; justify-content: space-between; margin-top: 18px; font-size: 20px; color: #cfd4e0; }
+	.t-col div { margin-top: 3px; }
+	.t-col.t-right { text-align: right; }
+	.t-foot { margin-top: 16px; text-align: center; font-size: 18px; color: #8a91a3; }
 </style>
 
 <div class="t-card">
-  <div class="t-title">OVERLAY PIPELINE OK</div>
+	<div class="t-title">OVERLAY PIPELINE OK</div>
 
-  <div class="t-row">
-    <div class="t-side t-blue">
-      <img class="t-logo" data-src="blue.logo" alt="">
-      <span data-bind="blue.name"></span>
-    </div>
-    <div class="t-vs">VS</div>
-    <div class="t-side t-red">
-      <img class="t-logo" data-src="red.logo" alt="">
-      <span data-bind="red.name"></span>
-    </div>
-  </div>
+	<div class="t-row">
+		<div class="t-side t-blue">
+			<img class="t-logo" data-src="blue.logo" alt="">
+				<span data-bind="blue.name"></span>
+			</div>
+		<div class="t-vs">VS</div>
+		<div class="t-side t-red">
+			<img class="t-logo" data-src="red.logo" alt="">
+				<span data-bind="red.name"></span>
+			</div>
+	</div>
 
-  <div class="t-players">
-    <div class="t-col">
-      <div data-bind="blue.player1.ign"></div>
-      <div data-bind="blue.player2.ign"></div>
-      <div data-bind="blue.player3.ign"></div>
-      <div data-bind="blue.player4.ign"></div>
-      <div data-bind="blue.player5.ign"></div>
-    </div>
-    <div class="t-col t-right">
-      <div data-bind="red.player1.ign"></div>
-      <div data-bind="red.player2.ign"></div>
-      <div data-bind="red.player3.ign"></div>
-      <div data-bind="red.player4.ign"></div>
-      <div data-bind="red.player5.ign"></div>
-    </div>
-  </div>
+	<div class="t-draft">
+		<div class="t-team">
+			<div class="t-label">PICKS</div>
+			<div class="t-slots">
+				<div class="t-slot">
+					<img data-src="pick.blue.slot1.icon" alt="">
+				</div>
+				<div class="t-slot">
+					<img data-src="pick.blue.slot2.icon" alt="">
+				</div>
+				<div class="t-slot">
+					<img data-src="pick.blue.slot3.icon" alt="">
+				</div>
+				<div class="t-slot">
+					<img data-src="pick.blue.slot4.icon" alt="">
+				</div>
+				<div class="t-slot">
+					<img data-src="pick.blue.slot5.icon" alt="">
+				</div>
+			</div>
+			<div class="t-bans">
+				<div class="t-label">BANS</div>
+				<div class="t-slots">
+					<div class="t-ban">
+						<img data-src="ban.blue.slot1.icon" alt="">
+					</div>
+					<div class="t-ban">
+						<img data-src="ban.blue.slot2.icon" alt="">
+					</div>
+					<div class="t-ban">
+						<img data-src="ban.blue.slot3.icon" alt="">
+					</div>
+					<div class="t-ban">
+						<img data-src="ban.blue.slot4.icon" alt="">
+					</div>
+					<div class="t-ban">
+						<img data-src="ban.blue.slot5.icon" alt="">
+					</div>
+					<div class="t-ban">
+						<img data-src="ban.blue.slot6.icon" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
 
-  <div class="t-foot">Series: <span data-bind="series.format"></span></div>
+		<div class="t-team t-right">
+			<div class="t-label">PICKS</div>
+			<div class="t-slots">
+				<div class="t-slot">
+					<img data-src="pick.red.slot1.icon" alt="">
+				</div>
+				<div class="t-slot">
+					<img data-src="pick.red.slot2.icon" alt="">
+				</div>
+				<div class="t-slot">
+					<img data-src="pick.red.slot3.icon" alt="">
+				</div>
+				<div class="t-slot">
+					<img data-src="pick.red.slot4.icon" alt="">
+				</div>
+				<div class="t-slot">
+					<img data-src="pick.red.slot5.icon" alt="">
+				</div>
+			</div>
+			<div class="t-bans">
+				<div class="t-label">BANS</div>
+				<div class="t-slots">
+					<div class="t-ban">
+						<img data-src="ban.red.slot1.icon" alt="">
+					</div>
+					<div class="t-ban">
+						<img data-src="ban.red.slot2.icon" alt="">
+					</div>
+					<div class="t-ban">
+						<img data-src="ban.red.slot3.icon" alt="">
+					</div>
+					<div class="t-ban">
+						<img data-src="ban.red.slot4.icon" alt="">
+					</div>
+					<div class="t-ban">
+						<img data-src="ban.red.slot5.icon" alt="">
+					</div>
+					<div class="t-ban">
+						<img data-src="ban.red.slot6.icon" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="t-players">
+		<div class="t-col">
+			<div data-bind="blue.player1.ign"></div>
+			<div data-bind="blue.player2.ign"></div>
+			<div data-bind="blue.player3.ign"></div>
+			<div data-bind="blue.player4.ign"></div>
+			<div data-bind="blue.player5.ign"></div>
+		</div>
+		<div class="t-col t-right">
+			<div data-bind="red.player1.ign"></div>
+			<div data-bind="red.player2.ign"></div>
+			<div data-bind="red.player3.ign"></div>
+			<div data-bind="red.player4.ign"></div>
+			<div data-bind="red.player5.ign"></div>
+		</div>
+	</div>
+
+	<div class="t-foot">
+		Series: <span data-bind="series.format"></span>
+	</div>
 </div>

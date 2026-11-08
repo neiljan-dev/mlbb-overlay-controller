@@ -1,0 +1,83 @@
+﻿<Window x:Class="MlbbOverlay.Views.PlayerChoiceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="{Binding Title}" Width="660" SizeToContent="Height"
+        WindowStartupLocation="CenterOwner" ResizeMode="NoResize"
+        Background="{StaticResource BgBrush}" Foreground="{StaticResource TextBrush}">
+    <Window.Resources>
+        <Style x:Key="ChoiceButton" TargetType="Button" BasedOn="{StaticResource SmallButton}">
+            <Setter Property="Height" Value="52"/>
+            <Setter Property="Margin" Value="0,0,0,8"/>
+            <Style.Triggers>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Opacity" Value="0.4"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <DataTemplate x:Key="PlayerTemplate">
+            <Button Style="{StaticResource ChoiceButton}"
+                    Command="{Binding DataContext.ChooseCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                    CommandParameter="{Binding}"
+                    IsEnabled="{Binding DataContext.CanChoose, RelativeSource={RelativeSource AncestorType=Window}}">
+                <StackPanel Orientation="Horizontal">
+                    <Border Width="36" Height="36" CornerRadius="6" Margin="0,0,10,0"
+                            Background="{StaticResource BgBrush}">
+                        <Image Stretch="UniformToFill"
+                               Source="{Binding IconFile, Converter={StaticResource FileImage}, ConverterParameter=hero|72}"/>
+                    </Border>
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="{Binding Ign}" FontWeight="SemiBold"/>
+                        <TextBlock Text="{Binding HeroName}" Style="{StaticResource MutedText}" FontSize="12"/>
+                    </StackPanel>
+                </StackPanel>
+            </Button>
+        </DataTemplate>
+    </Window.Resources>
+
+    <StackPanel Margin="24">
+        <TextBlock Text="{Binding Title}" FontSize="18" FontWeight="Bold"/>
+
+        <!-- Kills only: choose the number first -->
+        <StackPanel Margin="0,14,0,0"
+                    Visibility="{Binding AskKillCount, Converter={StaticResource BoolToVis}}">
+            <TextBlock Text="1. Choose the number of kills" Style="{StaticResource MutedText}"/>
+            <ListBox Margin="0,6,0,0" HorizontalAlignment="Left"
+                     ItemsSource="{Binding KillCounts}" SelectedItem="{Binding SelectedKillCount}">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" FontSize="22" FontWeight="Bold" Width="44"
+                                   TextAlignment="Center"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <TextBlock Text="2. Click the player" Style="{StaticResource MutedText}" Margin="0,12,0,0"/>
+        </StackPanel>
+
+        <Grid Margin="0,16,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="16"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+                <TextBlock Text="{Binding LeftTitle}" FontWeight="Bold" Foreground="#5AA9FF" Margin="0,0,0,8"/>
+                <ItemsControl ItemsSource="{Binding LeftPlayers}" ItemTemplate="{StaticResource PlayerTemplate}"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="2">
+                <TextBlock Text="{Binding RightTitle}" FontWeight="Bold" Foreground="#FF6B6B" Margin="0,0,0,8"/>
+                <ItemsControl ItemsSource="{Binding RightPlayers}" ItemTemplate="{StaticResource PlayerTemplate}"/>
+            </StackPanel>
+        </Grid>
+
+        <Button Content="Cancel" Style="{StaticResource SmallButton}" HorizontalAlignment="Right"
+                Margin="0,8,0,0" Command="{Binding CancelCommand}"/>
+    </StackPanel>
+</Window>

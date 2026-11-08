@@ -34,6 +34,22 @@ html, body {
 @keyframes ovIn  { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
 @keyframes ovOut { from { opacity: 1; } to { opacity: 0; transform: translateY(-12px); } }
 
+/* Temporary card for overlays that have no file yet */
+.fb {
+  position: absolute;
+  padding: 14px 22px;
+  border-radius: 12px;
+  background: rgba(15, 17, 21, 0.92);
+  border: 2px solid #f5a623;
+  color: #fff;
+  font: 20px "Segoe UI", Arial, sans-serif;
+}
+.fb-event { left: 50%; top: 60px; transform: translateX(-50%); }
+.fb-base  { left: 40px; bottom: 40px; }
+.fb-key   { margin-bottom: 6px; font-size: 26px; font-weight: 800; color: #f5a623; }
+.fb-timer { font-size: 48px; font-weight: 800; }
+.fb-note  { margin-top: 8px; font-size: 13px; color: #8a91a3; }
+
 #debug {
   position: fixed;
   right: 8px;

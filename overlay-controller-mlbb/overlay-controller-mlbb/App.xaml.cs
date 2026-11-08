@@ -44,12 +44,18 @@ public partial class App : Application
         services.AddSingleton<WebServerHost>();
         services.AddSingleton<ObsService>();
         services.AddSingleton<OverlayDirector>();
+        services.AddSingleton<GameActionService>();
+        services.AddSingleton<HotkeyService>();
 
         services.AddSingleton<MainViewModel>();
         services.AddTransient<MainMenuViewModel>();
         services.AddTransient<DatabaseViewModel>();
         services.AddTransient<TeamSetupViewModel>();
         services.AddTransient<ConnectionViewModel>();
+        services.AddTransient<ControllerViewModel>();
+        services.AddTransient<HeroSelectionViewModel>();
+        services.AddTransient<GameStateViewModel>();
+        services.AddTransient<ControllerSettingsViewModel>();
 
         services.AddSingleton<MainWindow>();
         Provider = services.BuildServiceProvider();
@@ -63,6 +69,10 @@ public partial class App : Application
 
         var window = Provider.GetRequiredService<MainWindow>();
         MainWindow = window;
+
+        // Hotkeys listen to this window's keyboard
+        Provider.GetRequiredService<HotkeyService>().Attach(window);
+
         window.Show();
     }
 

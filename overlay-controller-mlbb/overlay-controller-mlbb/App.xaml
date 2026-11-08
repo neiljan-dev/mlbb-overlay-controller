@@ -12,6 +12,7 @@
             </ResourceDictionary.MergedDictionaries>
 
             <conv:FileNameToImageConverter x:Key="FileImage"/>
+            <BooleanToVisibilityConverter x:Key="BoolToVis"/>
 
             <!-- "When you see this ViewModel, draw this View" -->
             <DataTemplate DataType="{x:Type vm:MainMenuViewModel}">
@@ -28,6 +29,18 @@
             </DataTemplate>
             <DataTemplate DataType="{x:Type vm:TeamEditorViewModel}">
                 <views:TeamEditorView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:ControllerViewModel}">
+                <views:ControllerView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:HeroSelectionViewModel}">
+                <views:HeroSelectionView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:TeamDraftViewModel}">
+                <views:TeamDraftView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:GameStateViewModel}">
+                <views:GameStateView/>
             </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>

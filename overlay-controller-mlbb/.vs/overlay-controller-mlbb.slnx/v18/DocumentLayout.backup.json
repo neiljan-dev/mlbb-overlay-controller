@@ -3,12 +3,172 @@
   "WorkspaceRootPath": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\themes\\dark.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\themes\\dark.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\wwwroot\\handcoded\\test.html||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\wwwroot\\handcoded\\test.html||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\services\\dialogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\services\\dialogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\views\\gamestateview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\views\\gamestateview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\views\\controllerview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\views\\controllerview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\views\\controllersettingswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\views\\controllersettingswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\views\\controllersettingswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\views\\controllersettingswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\viewmodels\\controllerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\viewmodels\\controllerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\viewmodels\\gamestateviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\viewmodels\\gamestateviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\viewmodels\\controllersettingsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\viewmodels\\controllersettingsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\services\\gameactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\services\\gameactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\services\\overlaydirector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\services\\overlaydirector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\services\\hotkeyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\services\\hotkeyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\services\\heroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\services\\heroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\services\\hotkeygesture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\services\\hotkeygesture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\models\\appsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\models\\appsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\wwwroot\\overlay\\overlay.css||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\wwwroot\\overlay\\overlay.css||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\wwwroot\\overlay\\overlay.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\wwwroot\\overlay\\overlay.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\views\\gamestateview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\views\\gamestateview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\views\\numberinputwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\views\\numberinputwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\views\\numberinputwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\views\\numberinputwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\views\\teamchoicewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\views\\teamchoicewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\views\\teamchoicewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\views\\teamchoicewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\views\\playerchoicewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\views\\playerchoicewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\views\\playerchoicewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\views\\playerchoicewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\viewmodels\\playerchoiceviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\viewmodels\\playerchoiceviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\services\\placeholderbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\services\\placeholderbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\models\\dialogmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\models\\dialogmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\models\\matchstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\models\\matchstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\views\\teamdraftview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\views\\teamdraftview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\views\\teamsetupview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\views\\teamsetupview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\views\\controllerview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\views\\controllerview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\views\\heroselectionview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\views\\heroselectionview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\views\\heroselectionview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\views\\heroselectionview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\views\\teamdraftview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\views\\teamdraftview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\viewmodels\\teamsetupviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\viewmodels\\teamsetupviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\viewmodels\\teamdraftviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\viewmodels\\teamdraftviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\viewmodels\\heroselectionviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\viewmodels\\heroselectionviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\viewmodels\\draftslotviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\viewmodels\\draftslotviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\services\\apppaths.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\services\\apppaths.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\themes\\dark.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\themes\\dark.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\models\\herorole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,16 +191,8 @@
       "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\models\\overlaymessages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\models\\appsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\models\\appsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\models\\hero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\models\\hero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|c:\\users\\neilb\\onedrive\\documents\\_project\\mlbb\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\services\\heroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B0328CB-8CEA-B40C-EBBB-D7DBE85B00E8}|overlay-controller-mlbb\\overlay-controller-mlbb.csproj|solutionrelative:overlay-controller-mlbb\\services\\heroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -49,128 +201,165 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 327,
-          "SelectedChildIndex": 0,
+          "DockedHeight": 148,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Dark.xaml",
-              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Themes\\Dark.xaml",
-              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Themes\\Dark.xaml",
-              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Themes\\Dark.xaml",
-              "RelativeToolTip": "overlay-controller-mlbb\\Themes\\Dark.xaml",
+              "DocumentIndex": 5,
+              "Title": "ControllerView.xaml",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\ControllerView.xaml",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Views\\ControllerView.xaml",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\ControllerView.xaml",
+              "RelativeToolTip": "overlay-controller-mlbb\\Views\\ControllerView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-11-07T10:01:20.642Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-07T10:24:44.679Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "TournamentProfile.cs",
-              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\TournamentProfile.cs",
-              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Models\\TournamentProfile.cs",
-              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\TournamentProfile.cs",
-              "RelativeToolTip": "overlay-controller-mlbb\\Models\\TournamentProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-07T10:00:04.963Z",
-              "EditorCaption": ""
+              "Title": "GameStateView.xaml",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\GameStateView.xaml",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Views\\GameStateView.xaml",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\GameStateView.xaml",
+              "RelativeToolTip": "overlay-controller-mlbb\\Views\\GameStateView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-11-07T15:48:21.508Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Team.cs",
-              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\Team.cs",
-              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Models\\Team.cs",
-              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\Team.cs",
-              "RelativeToolTip": "overlay-controller-mlbb\\Models\\Team.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-07T09:59:51.326Z",
-              "EditorCaption": ""
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\App.xaml",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\App.xaml",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\App.xaml",
+              "RelativeToolTip": "overlay-controller-mlbb\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-11-07T10:28:34.234Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\Player.cs",
-              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Models\\Player.cs",
-              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\Player.cs",
-              "RelativeToolTip": "overlay-controller-mlbb\\Models\\Player.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAtAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\App.xaml.cs",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\App.xaml.cs",
+              "RelativeToolTip": "overlay-controller-mlbb\\App.xaml.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAowFkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-07T09:59:41.501Z",
+              "WhenOpened": "2026-11-07T10:28:48.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DialogService.cs",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Services\\DialogService.cs",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Services\\DialogService.cs",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Services\\DialogService.cs",
+              "RelativeToolTip": "overlay-controller-mlbb\\Services\\DialogService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T15:45:12.575Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "test.html",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\wwwroot\\handcoded\\test.html",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\wwwroot\\handcoded\\test.html",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\wwwroot\\handcoded\\test.html",
+              "RelativeToolTip": "overlay-controller-mlbb\\wwwroot\\handcoded\\test.html",
+              "ViewState": "AgIAABkAAAAAAAAAAAAYwCEAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-11-07T10:29:22.742Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "OverlayMessages.cs",
-              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\OverlayMessages.cs",
-              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Models\\OverlayMessages.cs",
-              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\OverlayMessages.cs",
-              "RelativeToolTip": "overlay-controller-mlbb\\Models\\OverlayMessages.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA+AAAAAAAAAA==",
+              "Title": "ControllerSettingsWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\ControllerSettingsWindow.xaml.cs",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Views\\ControllerSettingsWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\ControllerSettingsWindow.xaml.cs",
+              "RelativeToolTip": "overlay-controller-mlbb\\Views\\ControllerSettingsWindow.xaml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAowCAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-07T09:58:35.443Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MatchState.cs",
-              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\MatchState.cs",
-              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Models\\MatchState.cs",
-              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\MatchState.cs",
-              "RelativeToolTip": "overlay-controller-mlbb\\Models\\MatchState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-07T09:57:46.831Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HeroRole.cs",
-              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\HeroRole.cs",
-              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Models\\HeroRole.cs",
-              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\HeroRole.cs",
-              "RelativeToolTip": "overlay-controller-mlbb\\Models\\HeroRole.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-07T09:57:38.652Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-08T11:26:35.283Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "Hero.cs",
-              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\Hero.cs",
-              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Models\\Hero.cs",
-              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\Hero.cs",
-              "RelativeToolTip": "overlay-controller-mlbb\\Models\\Hero.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Title": "ControllerViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\ViewModels\\ControllerViewModel.cs",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\ViewModels\\ControllerViewModel.cs",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\ViewModels\\ControllerViewModel.cs",
+              "RelativeToolTip": "overlay-controller-mlbb\\ViewModels\\ControllerViewModel.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAADwv0IAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-07T09:57:07.608Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-07T10:23:13.21Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ControllerSettingsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\ViewModels\\ControllerSettingsViewModel.cs",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\ViewModels\\ControllerSettingsViewModel.cs",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\ViewModels\\ControllerSettingsViewModel.cs",
+              "RelativeToolTip": "overlay-controller-mlbb\\ViewModels\\ControllerSettingsViewModel.cs",
+              "ViewState": "AgIAAJ4AAAAAAAAAAADwv7EAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-08T11:23:05.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "GameActionService.cs",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Services\\GameActionService.cs",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Services\\GameActionService.cs",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Services\\GameActionService.cs",
+              "RelativeToolTip": "overlay-controller-mlbb\\Services\\GameActionService.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAADwv34AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T15:44:57.821Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "AppSettings.cs",
-              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\AppSettings.cs",
-              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Models\\AppSettings.cs",
-              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\AppSettings.cs",
-              "RelativeToolTip": "overlay-controller-mlbb\\Models\\AppSettings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-07T09:56:54.038Z",
-              "EditorCaption": ""
+              "Title": "ControllerSettingsWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\ControllerSettingsWindow.xaml",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Views\\ControllerSettingsWindow.xaml",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\ControllerSettingsWindow.xaml",
+              "RelativeToolTip": "overlay-controller-mlbb\\Views\\ControllerSettingsWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-11-08T11:23:32.558Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
+              "Title": "OverlayDirector.cs",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Services\\OverlayDirector.cs",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Services\\OverlayDirector.cs",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Services\\OverlayDirector.cs",
+              "RelativeToolTip": "overlay-controller-mlbb\\Services\\OverlayDirector.cs",
+              "ViewState": "AgIAABUBAAAAAAAAAADwvygBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T10:25:35.319Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "HotkeyService.cs",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Services\\HotkeyService.cs",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Services\\HotkeyService.cs",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Services\\HotkeyService.cs",
+              "RelativeToolTip": "overlay-controller-mlbb\\Services\\HotkeyService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFABAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-08T11:23:51.362Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "HeroService.cs",
               "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Services\\HeroService.cs",
               "RelativeDocumentMoniker": "overlay-controller-mlbb\\Services\\HeroService.cs",
@@ -178,22 +367,410 @@
               "RelativeToolTip": "overlay-controller-mlbb\\Services\\HeroService.cs",
               "ViewState": "AgIAABkAAAAAAAAAAADgvyoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T10:10:19.904Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-06T10:10:19.904Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "HotkeyGesture.cs",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Services\\HotkeyGesture.cs",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Services\\HotkeyGesture.cs",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Services\\HotkeyGesture.cs",
+              "RelativeToolTip": "overlay-controller-mlbb\\Services\\HotkeyGesture.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAADwv0EAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-08T11:22:49.078Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AppSettings.cs",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\AppSettings.cs",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Models\\AppSettings.cs",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\AppSettings.cs",
+              "RelativeToolTip": "overlay-controller-mlbb\\Models\\AppSettings.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAADwvxQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T09:56:54.038Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "GameStateView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\GameStateView.xaml.cs",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Views\\GameStateView.xaml.cs",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\GameStateView.xaml.cs",
+              "RelativeToolTip": "overlay-controller-mlbb\\Views\\GameStateView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T15:48:31.871Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "overlay.js",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\wwwroot\\overlay\\overlay.js",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\wwwroot\\overlay\\overlay.js",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\wwwroot\\overlay\\overlay.js",
+              "RelativeToolTip": "overlay-controller-mlbb\\wwwroot\\overlay\\overlay.js",
+              "ViewState": "AgIAAK4AAAAAAAAAAADwv80AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-11-07T15:49:30.062Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "overlay.css",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\wwwroot\\overlay\\overlay.css",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\wwwroot\\overlay\\overlay.css",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\wwwroot\\overlay\\overlay.css",
+              "RelativeToolTip": "overlay-controller-mlbb\\wwwroot\\overlay\\overlay.css",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowC0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-11-07T15:49:40.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "NumberInputWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\NumberInputWindow.xaml.cs",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Views\\NumberInputWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\NumberInputWindow.xaml.cs",
+              "RelativeToolTip": "overlay-controller-mlbb\\Views\\NumberInputWindow.xaml.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAgwDMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T15:48:08.002Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "NumberInputWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\NumberInputWindow.xaml",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Views\\NumberInputWindow.xaml",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\NumberInputWindow.xaml",
+              "RelativeToolTip": "overlay-controller-mlbb\\Views\\NumberInputWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-11-07T15:48:00.983Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "TeamChoiceWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\TeamChoiceWindow.xaml.cs",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Views\\TeamChoiceWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\TeamChoiceWindow.xaml.cs",
+              "RelativeToolTip": "overlay-controller-mlbb\\Views\\TeamChoiceWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T15:47:41.244Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "TeamChoiceWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\TeamChoiceWindow.xaml",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Views\\TeamChoiceWindow.xaml",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\TeamChoiceWindow.xaml",
+              "RelativeToolTip": "overlay-controller-mlbb\\Views\\TeamChoiceWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-11-07T15:47:33.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "PlayerChoiceWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\PlayerChoiceWindow.xaml.cs",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Views\\PlayerChoiceWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\PlayerChoiceWindow.xaml.cs",
+              "RelativeToolTip": "overlay-controller-mlbb\\Views\\PlayerChoiceWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T15:47:23.618Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "PlayerChoiceWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\PlayerChoiceWindow.xaml",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Views\\PlayerChoiceWindow.xaml",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\PlayerChoiceWindow.xaml",
+              "RelativeToolTip": "overlay-controller-mlbb\\Views\\PlayerChoiceWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-11-07T15:46:57.405Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "PlayerChoiceViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\ViewModels\\PlayerChoiceViewModel.cs",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\ViewModels\\PlayerChoiceViewModel.cs",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\ViewModels\\PlayerChoiceViewModel.cs",
+              "RelativeToolTip": "overlay-controller-mlbb\\ViewModels\\PlayerChoiceViewModel.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAgwEUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T15:46:04.723Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "DialogModels.cs",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\DialogModels.cs",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Models\\DialogModels.cs",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\DialogModels.cs",
+              "RelativeToolTip": "overlay-controller-mlbb\\Models\\DialogModels.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T15:44:07.082Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "HeroSelectionView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\HeroSelectionView.xaml.cs",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Views\\HeroSelectionView.xaml.cs",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\HeroSelectionView.xaml.cs",
+              "RelativeToolTip": "overlay-controller-mlbb\\Views\\HeroSelectionView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T10:28:03.074Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "PlaceholderBuilder.cs",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Services\\PlaceholderBuilder.cs",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Services\\PlaceholderBuilder.cs",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Services\\PlaceholderBuilder.cs",
+              "RelativeToolTip": "overlay-controller-mlbb\\Services\\PlaceholderBuilder.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAgwHAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T10:25:14.269Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ControllerView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\ControllerView.xaml.cs",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Views\\ControllerView.xaml.cs",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\ControllerView.xaml.cs",
+              "RelativeToolTip": "overlay-controller-mlbb\\Views\\ControllerView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T10:28:26.672Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "TeamSetupView.xaml",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\TeamSetupView.xaml",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Views\\TeamSetupView.xaml",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\TeamSetupView.xaml",
+              "RelativeToolTip": "overlay-controller-mlbb\\Views\\TeamSetupView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-11-07T10:30:14.996Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "MatchState.cs",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\MatchState.cs",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Models\\MatchState.cs",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\MatchState.cs",
+              "RelativeToolTip": "overlay-controller-mlbb\\Models\\MatchState.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAgwDsAAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T09:57:46.831Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "TeamDraftView.xaml",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\TeamDraftView.xaml",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Views\\TeamDraftView.xaml",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\TeamDraftView.xaml",
+              "RelativeToolTip": "overlay-controller-mlbb\\Views\\TeamDraftView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-11-07T10:24:20.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "TeamDraftView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\TeamDraftView.xaml.cs",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Views\\TeamDraftView.xaml.cs",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\TeamDraftView.xaml.cs",
+              "RelativeToolTip": "overlay-controller-mlbb\\Views\\TeamDraftView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T10:27:40.12Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "TeamSetupViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\ViewModels\\TeamSetupViewModel.cs",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\ViewModels\\TeamSetupViewModel.cs",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\ViewModels\\TeamSetupViewModel.cs",
+              "RelativeToolTip": "overlay-controller-mlbb\\ViewModels\\TeamSetupViewModel.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAqwIgAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T10:26:40.102Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "TeamDraftViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\ViewModels\\TeamDraftViewModel.cs",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\ViewModels\\TeamDraftViewModel.cs",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\ViewModels\\TeamDraftViewModel.cs",
+              "RelativeToolTip": "overlay-controller-mlbb\\ViewModels\\TeamDraftViewModel.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAqwCwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T10:22:54.076Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "HeroSelectionViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\ViewModels\\HeroSelectionViewModel.cs",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\ViewModels\\HeroSelectionViewModel.cs",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\ViewModels\\HeroSelectionViewModel.cs",
+              "RelativeToolTip": "overlay-controller-mlbb\\ViewModels\\HeroSelectionViewModel.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAqwG8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T10:23:04.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "DraftSlotViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\ViewModels\\DraftSlotViewModel.cs",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\ViewModels\\DraftSlotViewModel.cs",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\ViewModels\\DraftSlotViewModel.cs",
+              "RelativeToolTip": "overlay-controller-mlbb\\ViewModels\\DraftSlotViewModel.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAA6wDwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T10:22:43.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "HeroSelectionView.xaml",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\HeroSelectionView.xaml",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Views\\HeroSelectionView.xaml",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Views\\HeroSelectionView.xaml",
+              "RelativeToolTip": "overlay-controller-mlbb\\Views\\HeroSelectionView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-11-07T10:24:31.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "AppPaths.cs",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Services\\AppPaths.cs",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Services\\AppPaths.cs",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Services\\AppPaths.cs",
+              "RelativeToolTip": "overlay-controller-mlbb\\Services\\AppPaths.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T10:08:11.118Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Dark.xaml",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Themes\\Dark.xaml",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Themes\\Dark.xaml",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Themes\\Dark.xaml",
+              "RelativeToolTip": "overlay-controller-mlbb\\Themes\\Dark.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-11-07T10:01:20.642Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "TournamentProfile.cs",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\TournamentProfile.cs",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Models\\TournamentProfile.cs",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\TournamentProfile.cs",
+              "RelativeToolTip": "overlay-controller-mlbb\\Models\\TournamentProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T10:00:04.963Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Team.cs",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\Team.cs",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Models\\Team.cs",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\Team.cs",
+              "RelativeToolTip": "overlay-controller-mlbb\\Models\\Team.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T09:59:51.326Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\Player.cs",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Models\\Player.cs",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\Player.cs",
+              "RelativeToolTip": "overlay-controller-mlbb\\Models\\Player.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T09:59:41.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "OverlayMessages.cs",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\OverlayMessages.cs",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Models\\OverlayMessages.cs",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\OverlayMessages.cs",
+              "RelativeToolTip": "overlay-controller-mlbb\\Models\\OverlayMessages.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T09:58:35.443Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "HeroRole.cs",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\HeroRole.cs",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Models\\HeroRole.cs",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\HeroRole.cs",
+              "RelativeToolTip": "overlay-controller-mlbb\\Models\\HeroRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T09:57:38.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Hero.cs",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\Hero.cs",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\Models\\Hero.cs",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\Models\\Hero.cs",
+              "RelativeToolTip": "overlay-controller-mlbb\\Models\\Hero.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T09:57:07.608Z"
             }
           ]
         },
         {
-          "DockedHeight": 73,
-          "SelectedChildIndex": -1,
+          "DockedHeight": 252,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:5:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+              "Name": "ST:6:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
               "$type": "Bookmark",
@@ -204,8 +781,17 @@
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:6:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GameStateViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\ViewModels\\GameStateViewModel.cs",
+              "RelativeDocumentMoniker": "overlay-controller-mlbb\\ViewModels\\GameStateViewModel.cs",
+              "ToolTip": "C:\\Users\\neilb\\OneDrive\\Documents\\_Project\\MLBB\\mlbb-overlay-controller\\overlay-controller-mlbb\\overlay-controller-mlbb\\ViewModels\\GameStateViewModel.cs",
+              "RelativeToolTip": "overlay-controller-mlbb\\ViewModels\\GameStateViewModel.cs",
+              "ViewState": "AgIAAKMAAAAAAAAAAAAowLQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T15:42:29.508Z",
+              "EditorCaption": ""
             }
           ]
         }

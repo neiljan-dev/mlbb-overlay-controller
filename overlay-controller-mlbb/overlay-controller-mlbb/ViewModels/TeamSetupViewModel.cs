@@ -113,7 +113,7 @@ public partial class TeamSetupViewModel : ObservableObject
         _navigator.Navigate<MainMenuViewModel>();
     }
 
-    [RelayCommand]
+        [RelayCommand]
     private void Proceed()
     {
         var team1 = Team1.ToSnapshot();
@@ -136,10 +136,6 @@ public partial class TeamSetupViewModel : ObservableObject
 
         ErrorText = "";
         _match.ApplyTeamSetup(SelectedProfile?.Id, Format, team1, team2);
-
-        // Temporary page until the real Controller UI exists (Milestones 5 to 7)
-        var summary = $"{team1.Name} (Blue)  vs  {team2.Name} (Red)   |   {Format}\n\n" +
-                      "The Controller screens are built in Milestones 5 to 7.";
-        _navigator.NavigateTo(new PlaceholderViewModel("Controller", summary, _navigator));
+        _navigator.Navigate<ControllerViewModel>();
     }
 }

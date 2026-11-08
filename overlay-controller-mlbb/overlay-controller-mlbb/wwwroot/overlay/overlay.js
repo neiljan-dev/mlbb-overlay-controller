@@ -30,7 +30,13 @@
   window.addEventListener('resize', fit);
   fit();
 
-  // Fill placeholders: data-bind="blue.name" -> text, data-src="blue.logo" -> image
+  const escapeHtml = s => String(s).replace(/[&<>"']/g, c =>
+    ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+  // Fill placeholders:
+  //   data-bind="blue.name"        -> text
+  //   data-src="blue.logo"         -> image
+  //   data-countdown="timer.end"   -> mm:ss counting down to that end time (see the timer below)
   function applyData(root, data) {
     root.querySelectorAll('[data-bind]').forEach(el => {
       el.textContent = data[el.dataset.bind] ?? '';
@@ -46,12 +52,58 @@
         el.style.visibility = 'hidden';
       }
     });
+    root.querySelectorAll('[data-countdown]').forEach(el => {
+      el.dataset.endMs = data[el.dataset.countdown] ?? '';
+    });
+    updateCountdowns();
   }
 
+  // ---- Countdown timers (ads) ----
+  function formatRemaining(ms) {
+    const total = Math.max(0, Math.ceil(ms / 1000));
+    const minutes = Math.floor(total / 60);
+    const seconds = total % 60;
+    return String(minutes).padStart(2, '0') + ':' + String(seconds).padStart(2, '0');
+  }
+
+  function updateCountdowns() {
+    const now = Date.now();
+    document.querySelectorAll('[data-countdown]').forEach(el => {
+      const end = Number(el.dataset.endMs);
+      el.textContent = end ? formatRemaining(end - now) : '';
+    });
+  }
+  setInterval(updateCountdowns, 250);
+
+  // ---- Overlay files ----
   async function loadTemplate(key) {
     const response = await fetch(`/handcoded/${encodeURIComponent(key)}.html`, { cache: 'no-store' });
-    if (!response.ok) throw new Error(`No overlay file found for "${key}"`);
+    if (!response.ok) {
+      const error = new Error(`No overlay file found for "${key}"`);
+      error.missing = true;
+      throw error;
+    }
     return response.text();
+  }
+
+  // Temporary card shown while an overlay has no file yet (so you can test every button)
+  function fallbackHtml(msg) {
+    const data = msg.data || {};
+    const prefixes = ['event.', 'mvp.', 'result.', 'score.', 'timer.'];
+    const rows = Object.entries(data)
+      .filter(([key, value]) => value && prefixes.some(p => key.startsWith(p)))
+      .slice(0, 10)
+      .map(([key, value]) => `<div>${escapeHtml(key)}: ${escapeHtml(value)}</div>`)
+      .join('');
+    const timer = data['timer.end'] ? '<div class="fb-timer" data-countdown="timer.end"></div>' : '';
+    const layerClass = msg.layer === 'base' ? 'fb-base' : 'fb-event';
+
+    return `<div class="fb ${layerClass}">
+      <div class="fb-key">${escapeHtml(msg.key)}</div>
+      ${timer}
+      ${rows}
+      <div class="fb-note">placeholder card: no file wwwroot/handcoded/${escapeHtml(msg.key)}.html yet</div>
+    </div>`;
   }
 
   async function show(msg) {
@@ -60,9 +112,13 @@
     try {
       html = await loadTemplate(msg.key);
     } catch (err) {
-      console.error(err);
-      setDebug(err.message, true);
-      return;
+      if (err.missing) {
+        html = fallbackHtml(msg);
+      } else {
+        console.error(err);
+        setDebug(err.message, true);
+        return;
+      }
     }
     if (myEpoch !== epoch) return;            // "hide all" arrived while loading
     if (cancelled.delete(msg.id)) return;     // hidden while loading
@@ -111,7 +167,7 @@
   connection.on('Hide', id => remove(id));
   connection.on('HideAll', () => hideAll(false));
 
-  // Used from Milestone 5: refresh the placeholders of everything on screen
+  // The app sends new data (a hero was picked, a name changed...): refresh what is on screen
   connection.on('Update', data => {
     for (const item of shown.values()) {
       Object.assign(item.msg.data, data);

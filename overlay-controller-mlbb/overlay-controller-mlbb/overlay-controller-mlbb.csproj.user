@@ -5,7 +5,16 @@
     <Compile Update="Views\ConnectionWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\ControllerSettingsWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ControllerView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\DatabaseView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\GameStateView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\HeroEditWindow.xaml.cs">
@@ -14,13 +23,28 @@
     <Compile Update="Views\HeroPickerWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\HeroSelectionView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\InputWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\MainMenuView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\NumberInputWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\PlaceholderView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\PlayerChoiceWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\TeamChoiceWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\TeamDraftView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\TeamEditorView.xaml.cs">
