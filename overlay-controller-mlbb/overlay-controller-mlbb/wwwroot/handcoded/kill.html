@@ -1,0 +1,49 @@
+<style>
+  .k { position: absolute; left: 50%; bottom: 170px; transform: translateX(-50%); width: 1180px; height: 230px;
+       font-family: "Segoe UI", Arial, sans-serif; color: #fff; --c: #5aa9ff; }
+  .k[data-side="red"] { --c: #ff6b6b; }
+
+  .k-panel { position: absolute; inset: 0; border-radius: 28px; border: 3px solid var(--c);
+             background: linear-gradient(90deg, rgba(10,12,18,0.95), rgba(10,12,18,0.82));
+             box-shadow: 0 0 36px var(--c); animation: kSlide 0.35s cubic-bezier(0.2, 0.9, 0.3, 1.15) both; }
+
+  .k-icon { position: absolute; left: 36px; top: 30px; width: 170px; height: 170px; border-radius: 50%;
+            overflow: hidden; border: 5px solid var(--c); background: #0f1115; }
+  .k-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .k-main { position: absolute; left: 240px; top: 24px; right: 240px; }
+  .k-label { font-size: 84px; font-weight: 900; font-style: italic; letter-spacing: 3px; line-height: 1;
+             color: var(--c); text-shadow: 0 0 22px var(--c); animation: kPulse 0.6s ease both; }
+  .k-ign { margin-top: 12px; font-size: 46px; font-weight: 800; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .k-hero { margin-top: 2px; font-size: 24px; letter-spacing: 3px; color: #cfd4e0; text-transform: uppercase; }
+
+  .k-side { position: absolute; right: 36px; top: 28px; width: 170px; text-align: center; }
+  .k-logo { width: 110px; height: 110px; object-fit: contain; }
+  .k-count { font-size: 64px; font-weight: 900; line-height: 1; color: var(--c); }
+
+  /* Bigger kills look special */
+  .k[data-count="4"] .k-label { font-size: 92px; }
+  .k[data-count="5"] .k-label { font-size: 100px; color: #ffd24a; text-shadow: 0 0 28px #ffb300; }
+  .k[data-count="5"] .k-panel { border-color: #ffd24a; box-shadow: 0 0 56px #ffb300; }
+  .k[data-count="5"] .k-count { color: #ffd24a; }
+
+  @keyframes kSlide { from { opacity: 0; transform: translateY(80px) scale(0.92); } to { opacity: 1; transform: none; } }
+  @keyframes kPulse { 0% { opacity: 0; letter-spacing: 26px; } 100% { opacity: 1; letter-spacing: 3px; } }
+</style>
+
+<div class="k" data-attr="side=event.player.team.side;count=event.kill.count">
+  <div class="k-panel"></div>
+
+  <div class="k-icon"><img data-src="event.player.icon" alt=""></div>
+
+  <div class="k-main">
+    <div class="k-label" data-bind="event.kill.label"></div>
+    <div class="k-ign" data-bind="event.player.ign"></div>
+    <div class="k-hero" data-bind="event.player.hero"></div>
+  </div>
+
+  <div class="k-side">
+    <img class="k-logo" data-src="event.player.team.logo" alt="">
+    <div class="k-count">x<span data-bind="event.kill.count"></span></div>
+  </div>
+</div>

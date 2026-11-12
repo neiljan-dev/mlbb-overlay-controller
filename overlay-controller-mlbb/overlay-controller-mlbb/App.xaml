@@ -42,6 +42,15 @@
             <DataTemplate DataType="{x:Type vm:GameStateViewModel}">
                 <views:GameStateView/>
             </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:OverlayTesterViewModel}">
+                <views:OverlayTesterView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:DesignListViewModel}">
+                <views:DesignListView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:EditorViewModel}">
+                <views:EditorView/>
+            </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

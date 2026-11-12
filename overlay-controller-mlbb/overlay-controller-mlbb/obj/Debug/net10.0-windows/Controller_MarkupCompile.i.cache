@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET10_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NET10_0_OR_GREATER;NETCOREAPP1_0_OR_GREATER;NETCOREAPP1_1_OR_GREATER;NETCOREAPP2_0_OR_GREATER;NETCOREAPP2_1_OR_GREATER;NETCOREAPP2_2_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\neilb\OneDrive\Documents\_Project\MLBB\mlbb-overlay-controller\overlay-controller-mlbb\overlay-controller-mlbb\App.xaml
-19-2039970614
+221427405236
+3-867535828
+932068900292
+3621020918571
+MainWindow.xaml;Themes\Dark.xaml;Views\ConnectionWindow.xaml;Views\ControllerSettingsWindow.xaml;Views\ControllerView.xaml;Views\DatabaseView.xaml;Views\DesignListView.xaml;Views\EditorView.xaml;Views\GameStateView.xaml;Views\HeroEditWindow.xaml;Views\HeroPickerWindow.xaml;Views\HeroSelectionView.xaml;Views\InputWindow.xaml;Views\MainMenuView.xaml;Views\NumberInputWindow.xaml;Views\OverlayTesterView.xaml;Views\PlaceholderView.xaml;Views\PlayerChoiceWindow.xaml;Views\TeamChoiceWindow.xaml;Views\TeamDraftView.xaml;Views\TeamEditorView.xaml;Views\TeamSetupView.xaml;
 
-782017438556
-3591511472653
-MainWindow.xaml;Themes\Dark.xaml;Views\ConnectionWindow.xaml;Views\ControllerSettingsWindow.xaml;Views\ControllerView.xaml;Views\DatabaseView.xaml;Views\GameStateView.xaml;Views\HeroEditWindow.xaml;Views\HeroPickerWindow.xaml;Views\HeroSelectionView.xaml;Views\InputWindow.xaml;Views\MainMenuView.xaml;Views\NumberInputWindow.xaml;Views\PlaceholderView.xaml;Views\PlayerChoiceWindow.xaml;Views\TeamChoiceWindow.xaml;Views\TeamDraftView.xaml;Views\TeamEditorView.xaml;Views\TeamSetupView.xaml;
-
-True
+False
 

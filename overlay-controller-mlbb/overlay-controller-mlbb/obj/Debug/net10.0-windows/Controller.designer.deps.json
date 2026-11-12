@@ -413,6 +413,25 @@
           }
         }
       },
+      "Microsoft.Web.WebView2/1.0.4314.35": {
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/WebView2Loader.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "1.0.4314.35"
+          },
+          "runtimes/win-x64/native/WebView2Loader.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "1.0.4314.35"
+          },
+          "runtimes/win-x86/native/WebView2Loader.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "1.0.4314.35"
+          }
+        }
+      },
       "Mono.TextTemplating/3.0.0": {
         "runtime": {
           "lib/net6.0/Mono.TextTemplating.dll": {
@@ -801,6 +820,13 @@
       "sha512": "sha512-oNv2JtYXhpdJrX63nibx1JT3uCESOBQ1LAk7Dtz/sr0+laW0KRM6eKp4CZ3MHDR2siIkKsY8MmUkeP5DKkQQ5w==",
       "path": "microsoft.visualstudio.solutionpersistence/1.0.52",
       "hashPath": "microsoft.visualstudio.solutionpersistence.1.0.52.nupkg.sha512"
+    },
+    "Microsoft.Web.WebView2/1.0.4314.35": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-x5MFf2W03xueU1mMNvivXfHSsQ+ODo7vJ36qw/dLtU5Gs+8d7+7N7zzmNNDoT3ffosmcvZNBtUnlzyiDUuBkSQ==",
+      "path": "microsoft.web.webview2/1.0.4314.35",
+      "hashPath": "microsoft.web.webview2.1.0.4314.35.nupkg.sha512"
     },
     "Mono.TextTemplating/3.0.0": {
       "type": "package",

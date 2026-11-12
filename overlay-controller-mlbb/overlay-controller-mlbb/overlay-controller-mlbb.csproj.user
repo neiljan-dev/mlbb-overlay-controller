@@ -14,6 +14,12 @@
     <Compile Update="Views\DatabaseView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\DesignListView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\EditorView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\GameStateView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -33,6 +39,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\NumberInputWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\OverlayTesterView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\PlaceholderView.xaml.cs">

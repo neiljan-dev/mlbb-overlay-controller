@@ -1,0 +1,153 @@
+<style>
+  .dp { position: absolute; inset: 0; font-family: "Segoe UI", Arial, sans-serif; color: #fff; }
+
+  /* Top bar */
+  .dp-top { position: absolute; left: 0; top: 0; width: 1920px; height: 200px;
+            background: linear-gradient(180deg, rgba(8,10,16,0.92), rgba(8,10,16,0)); }
+  .dp-team { position: absolute; top: 28px; display: flex; align-items: center; gap: 20px; font-size: 42px; font-weight: 800; }
+  .dp-team.dp-b { left: 40px; color: #5aa9ff; }
+  .dp-team.dp-r { right: 40px; flex-direction: row-reverse; color: #ff6b6b; }
+  .dp-logo { width: 88px; height: 88px; object-fit: contain; }
+
+  .dp-center { position: absolute; left: 50%; top: 24px; transform: translateX(-50%); text-align: center; }
+  .dp-title { font-size: 30px; font-weight: 800; letter-spacing: 8px; }
+  .dp-sub { margin-top: 6px; font-size: 22px; color: #cfd4e0; }
+  .dp-score { margin-top: 4px; font-size: 40px; font-weight: 800; }
+
+  /* Bans */
+  .dp-bans { position: absolute; top: 140px; display: flex; gap: 10px; align-items: center; }
+  .dp-bans.dp-b { left: 40px; }
+  .dp-bans.dp-r { right: 40px; flex-direction: row-reverse; }
+  .dp-bans-label { font-size: 16px; letter-spacing: 4px; color: #8a91a3; }
+  .dp-ban { width: 56px; height: 56px; border-radius: 50%; overflow: hidden; background: #0f1115;
+            border: 3px solid #2a2f3b; filter: grayscale(0.4); }
+  .dp-ban img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  /* Pick columns */
+  .dp-col { position: absolute; top: 215px; width: 440px; display: flex; flex-direction: column; gap: 10px; }
+  .dp-col.dp-b { left: 40px; }
+  .dp-col.dp-r { right: 40px; }
+
+  .dp-card { position: relative; height: 150px; border-radius: 16px; overflow: hidden;
+             background: rgba(12, 14, 20, 0.88); border: 3px solid #2a2f3b;
+             display: flex; align-items: center; gap: 18px; padding: 0 18px;
+             animation: dpIn 0.5s ease both; animation-delay: calc(var(--i) * 90ms); }
+  .dp-b .dp-card { border-left-color: #5aa9ff; border-left-width: 8px; }
+  .dp-r .dp-card { border-right-color: #ff6b6b; border-right-width: 8px; flex-direction: row-reverse; text-align: right; }
+
+  .dp-art { position: absolute; top: 0; height: 100%; width: 70%; object-fit: cover; opacity: 0.5; }
+  .dp-b .dp-art { right: 0; -webkit-mask-image: linear-gradient(90deg, transparent, #000 60%); mask-image: linear-gradient(90deg, transparent, #000 60%); }
+  .dp-r .dp-art { left: 0; -webkit-mask-image: linear-gradient(270deg, transparent, #000 60%); mask-image: linear-gradient(270deg, transparent, #000 60%); }
+
+  .dp-icon { position: relative; width: 112px; height: 112px; border-radius: 14px; overflow: hidden;
+             background: #0f1115; border: 3px solid #2a2f3b; flex-shrink: 0; }
+  .dp-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .dp-text { position: relative; min-width: 0; }
+  .dp-ign { font-size: 34px; font-weight: 800; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .dp-hero { margin-top: 4px; font-size: 24px; color: #cfd4e0; text-transform: uppercase; letter-spacing: 2px; }
+  .dp-hero:empty::before { content: "PICKING..."; color: #5d6577; }
+
+  @keyframes dpIn { from { opacity: 0; transform: translateX(-60px); } to { opacity: 1; transform: none; } }
+  .dp-r .dp-card { --dir: 1; }
+  .dp-r .dp-card { animation-name: dpInRight; }
+  @keyframes dpInRight { from { opacity: 0; transform: translateX(60px); } to { opacity: 1; transform: none; } }
+</style>
+
+<div class="dp">
+  <div class="dp-top"></div>
+
+  <!-- Teams -->
+  <div class="dp-team dp-b">
+    <img class="dp-logo" data-src="blue.logo" alt="">
+    <span data-bind="blue.name"></span>
+  </div>
+  <div class="dp-team dp-r">
+    <img class="dp-logo" data-src="red.logo" alt="">
+    <span data-bind="red.name"></span>
+  </div>
+
+  <div class="dp-center">
+    <div class="dp-title">DRAFT PICK</div>
+    <div class="dp-sub">GAME <span data-bind="series.game"></span> | <span data-bind="series.format"></span></div>
+    <div class="dp-score"><span data-bind="series.score.blue"></span> - <span data-bind="series.score.red"></span></div>
+  </div>
+
+  <!-- Bans -->
+  <div class="dp-bans dp-b">
+    <span class="dp-bans-label">BANS</span>
+    <div class="dp-ban" data-show="ban.blue.slot1.show"><img data-src="ban.blue.slot1.icon" alt=""></div>
+    <div class="dp-ban" data-show="ban.blue.slot2.show"><img data-src="ban.blue.slot2.icon" alt=""></div>
+    <div class="dp-ban" data-show="ban.blue.slot3.show"><img data-src="ban.blue.slot3.icon" alt=""></div>
+    <div class="dp-ban" data-show="ban.blue.slot4.show"><img data-src="ban.blue.slot4.icon" alt=""></div>
+    <div class="dp-ban" data-show="ban.blue.slot5.show"><img data-src="ban.blue.slot5.icon" alt=""></div>
+    <div class="dp-ban" data-show="ban.blue.slot6.show"><img data-src="ban.blue.slot6.icon" alt=""></div>
+  </div>
+  <div class="dp-bans dp-r">
+    <span class="dp-bans-label">BANS</span>
+    <div class="dp-ban" data-show="ban.red.slot1.show"><img data-src="ban.red.slot1.icon" alt=""></div>
+    <div class="dp-ban" data-show="ban.red.slot2.show"><img data-src="ban.red.slot2.icon" alt=""></div>
+    <div class="dp-ban" data-show="ban.red.slot3.show"><img data-src="ban.red.slot3.icon" alt=""></div>
+    <div class="dp-ban" data-show="ban.red.slot4.show"><img data-src="ban.red.slot4.icon" alt=""></div>
+    <div class="dp-ban" data-show="ban.red.slot5.show"><img data-src="ban.red.slot5.icon" alt=""></div>
+    <div class="dp-ban" data-show="ban.red.slot6.show"><img data-src="ban.red.slot6.icon" alt=""></div>
+  </div>
+
+  <!-- Blue picks -->
+  <div class="dp-col dp-b">
+    <div class="dp-card" style="--i:0">
+      <img class="dp-art" data-src="pick.blue.slot1.splash" alt="">
+      <div class="dp-icon"><img data-src="pick.blue.slot1.icon" alt=""></div>
+      <div class="dp-text"><div class="dp-ign" data-bind="blue.player1.ign"></div><div class="dp-hero" data-bind="pick.blue.slot1.hero"></div></div>
+    </div>
+    <div class="dp-card" style="--i:1">
+      <img class="dp-art" data-src="pick.blue.slot2.splash" alt="">
+      <div class="dp-icon"><img data-src="pick.blue.slot2.icon" alt=""></div>
+      <div class="dp-text"><div class="dp-ign" data-bind="blue.player2.ign"></div><div class="dp-hero" data-bind="pick.blue.slot2.hero"></div></div>
+    </div>
+    <div class="dp-card" style="--i:2">
+      <img class="dp-art" data-src="pick.blue.slot3.splash" alt="">
+      <div class="dp-icon"><img data-src="pick.blue.slot3.icon" alt=""></div>
+      <div class="dp-text"><div class="dp-ign" data-bind="blue.player3.ign"></div><div class="dp-hero" data-bind="pick.blue.slot3.hero"></div></div>
+    </div>
+    <div class="dp-card" style="--i:3">
+      <img class="dp-art" data-src="pick.blue.slot4.splash" alt="">
+      <div class="dp-icon"><img data-src="pick.blue.slot4.icon" alt=""></div>
+      <div class="dp-text"><div class="dp-ign" data-bind="blue.player4.ign"></div><div class="dp-hero" data-bind="pick.blue.slot4.hero"></div></div>
+    </div>
+    <div class="dp-card" style="--i:4">
+      <img class="dp-art" data-src="pick.blue.slot5.splash" alt="">
+      <div class="dp-icon"><img data-src="pick.blue.slot5.icon" alt=""></div>
+      <div class="dp-text"><div class="dp-ign" data-bind="blue.player5.ign"></div><div class="dp-hero" data-bind="pick.blue.slot5.hero"></div></div>
+    </div>
+  </div>
+
+  <!-- Red picks -->
+  <div class="dp-col dp-r">
+    <div class="dp-card" style="--i:0">
+      <img class="dp-art" data-src="pick.red.slot1.splash" alt="">
+      <div class="dp-icon"><img data-src="pick.red.slot1.icon" alt=""></div>
+      <div class="dp-text"><div class="dp-ign" data-bind="red.player1.ign"></div><div class="dp-hero" data-bind="pick.red.slot1.hero"></div></div>
+    </div>
+    <div class="dp-card" style="--i:1">
+      <img class="dp-art" data-src="pick.red.slot2.splash" alt="">
+      <div class="dp-icon"><img data-src="pick.red.slot2.icon" alt=""></div>
+      <div class="dp-text"><div class="dp-ign" data-bind="red.player2.ign"></div><div class="dp-hero" data-bind="pick.red.slot2.hero"></div></div>
+    </div>
+    <div class="dp-card" style="--i:2">
+      <img class="dp-art" data-src="pick.red.slot3.splash" alt="">
+      <div class="dp-icon"><img data-src="pick.red.slot3.icon" alt=""></div>
+      <div class="dp-text"><div class="dp-ign" data-bind="red.player3.ign"></div><div class="dp-hero" data-bind="pick.red.slot3.hero"></div></div>
+    </div>
+    <div class="dp-card" style="--i:3">
+      <img class="dp-art" data-src="pick.red.slot4.splash" alt="">
+      <div class="dp-icon"><img data-src="pick.red.slot4.icon" alt=""></div>
+      <div class="dp-text"><div class="dp-ign" data-bind="red.player4.ign"></div><div class="dp-hero" data-bind="pick.red.slot4.hero"></div></div>
+    </div>
+    <div class="dp-card" style="--i:4">
+      <img class="dp-art" data-src="pick.red.slot5.splash" alt="">
+      <div class="dp-icon"><img data-src="pick.red.slot5.icon" alt=""></div>
+      <div class="dp-text"><div class="dp-ign" data-bind="red.player5.ign"></div><div class="dp-hero" data-bind="pick.red.slot5.hero"></div></div>
+    </div>
+  </div>
+</div>

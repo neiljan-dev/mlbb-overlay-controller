@@ -24,6 +24,12 @@ public partial class WebServerHost : ObservableObject
     public int Port { get; private set; }
     public string OverlayUrl => $"http://127.0.0.1:{Port}/overlay";
 
+    /// <summary>Set by the app: returns the saved design (JSON text) of an overlay, or null.</summary>
+    public Func<string, string?>? DesignProvider { get; set; }
+
+    /// <summary>Set by the app: sample values for every placeholder (used by the editor).</summary>
+    public Func<Dictionary<string, string>>? SampleDataProvider { get; set; }
+
     [ObservableProperty] private string _statusText = "Overlay server: starting...";
     [ObservableProperty] private bool _isRunning;
 
@@ -90,6 +96,81 @@ public partial class WebServerHost : ObservableObject
                 context.Response.ContentType = "text/html; charset=utf-8";
                 context.Response.Headers["Cache-Control"] = "no-store";
                 await context.Response.SendFileAsync(Path.Combine(AppPaths.WebRoot, "overlay", "index.html"));
+            });
+
+
+            // ---- Editor ----
+            app.MapGet("/editor", async (HttpContext context) =>
+            {
+                context.Response.ContentType = "text/html; charset=utf-8";
+                context.Response.Headers["Cache-Control"] = "no-store";
+                await context.Response.SendFileAsync(Path.Combine(AppPaths.WebRoot, "editor", "index.html"));
+            });
+
+            // The saved design of one overlay (404 = never designed)
+            app.MapGet("/api/overlays/{key}", async (HttpContext context, string key) =>
+            {
+                var json = DesignProvider?.Invoke(key);
+                if (json == null)
+                {
+                    context.Response.StatusCode = 404;
+                    return;
+                }
+                context.Response.ContentType = "application/json; charset=utf-8";
+                context.Response.Headers["Cache-Control"] = "no-store";
+                await context.Response.WriteAsync(json);
+            });
+
+            // Sample values for every placeholder
+            app.MapGet("/api/dummydata", async (HttpContext context) =>
+            {
+                var data = SampleDataProvider?.Invoke() ?? new Dictionary<string, string>();
+                context.Response.ContentType = "application/json; charset=utf-8";
+                context.Response.Headers["Cache-Control"] = "no-store";
+                await context.Response.WriteAsync(JsonSerializer.Serialize(data));
+            });
+
+            // The images already uploaded for overlays
+            app.MapGet("/api/assets", async (HttpContext context) =>
+            {
+                string[] images = [".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg"];
+                var files = new DirectoryInfo(AppPaths.OverlayAssets).GetFiles()
+                    .Where(f => images.Contains(f.Extension.ToLowerInvariant()))
+                    .OrderByDescending(f => f.LastWriteTimeUtc)
+                    .Select(f => new { name = f.Name, url = "/media/assets/" + Uri.EscapeDataString(f.Name) });
+
+                context.Response.ContentType = "application/json; charset=utf-8";
+                context.Response.Headers["Cache-Control"] = "no-store";
+                await context.Response.WriteAsync(JsonSerializer.Serialize(files));
+            });
+
+            // Upload an image (the file is the request body, the name is in ?name=)
+            app.MapPost("/api/assets", async (HttpContext context) =>
+            {
+                string[] allowed = [".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg", ".webm"];
+                var rawName = context.Request.Query["name"].ToString();
+                var extension = Path.GetExtension(rawName).ToLowerInvariant();
+
+                if (!allowed.Contains(extension))
+                {
+                    context.Response.StatusCode = 400;
+                    await context.Response.WriteAsync("Unsupported file type.");
+                    return;
+                }
+
+                var safe = string.Concat(Path.GetFileNameWithoutExtension(rawName)
+                    .Select(c => char.IsLetterOrDigit(c) || c == '-' || c == '_' ? c : '_'));
+                if (safe.Length == 0) safe = "image";
+
+                var fileName = $"{Guid.NewGuid().ToString("N")[..6]}_{safe}{extension}";
+                await using (var file = File.Create(Path.Combine(AppPaths.OverlayAssets, fileName)))
+                {
+                    await context.Request.Body.CopyToAsync(file);
+                }
+
+                context.Response.ContentType = "application/json; charset=utf-8";
+                await context.Response.WriteAsync(JsonSerializer.Serialize(
+                    new { name = fileName, url = "/media/assets/" + Uri.EscapeDataString(fileName) }));
             });
 
             app.MapHub<OverlayHub>("/hub");

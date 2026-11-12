@@ -61,3 +61,7 @@ html, body {
   color: #fff;
   font: 14px "Segoe UI", Arial, sans-serif;
 }
+
+/* Played automatically when an image changes (a hero is picked...). No transform, so it never fights an overlay's own layout. */
+.changed { animation: popIn 0.35s ease backwards; }
+@keyframes popIn { from { opacity: 0; filter: brightness(2); } to { opacity: 1; filter: none; } }

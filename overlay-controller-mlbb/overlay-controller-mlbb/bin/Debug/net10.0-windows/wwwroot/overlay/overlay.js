@@ -22,6 +22,12 @@
     if (force) debugBox.hidden = false;
   }
 
+  if (!window.OverlayRenderer) {
+    setDebug('renderer.js is missing (see wwwroot/overlay)', true);
+    return;
+  }
+  const { designToHtml, applyData } = window.OverlayRenderer;
+
   // Scale the 1920x1080 canvas to the window (scale = 1 in a 1920x1080 OBS source)
   function fit() {
     const scale = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
@@ -33,65 +39,37 @@
   const escapeHtml = s => String(s).replace(/[&<>"']/g, c =>
     ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
-  // Fill placeholders:
-  //   data-bind="blue.name"        -> text
-  //   data-src="blue.logo"         -> image
-  //   data-countdown="timer.end"   -> mm:ss counting down to that end time (see the timer below)
-  function applyData(root, data) {
-    root.querySelectorAll('[data-bind]').forEach(el => {
-      el.textContent = data[el.dataset.bind] ?? '';
-    });
-    root.querySelectorAll('[data-src]').forEach(el => {
-      const value = data[el.dataset.src];
-      if (value) {
-        el.onerror = () => { el.style.visibility = 'hidden'; };
-        el.src = value;
-        el.style.visibility = 'visible';
-      } else {
-        el.removeAttribute('src');
-        el.style.visibility = 'hidden';
-      }
-    });
-    root.querySelectorAll('[data-countdown]').forEach(el => {
-      el.dataset.endMs = data[el.dataset.countdown] ?? '';
-    });
-    updateCountdowns();
-  }
-
-  // ---- Countdown timers (ads) ----
-  function formatRemaining(ms) {
-    const total = Math.max(0, Math.ceil(ms / 1000));
-    const minutes = Math.floor(total / 60);
-    const seconds = total % 60;
-    return String(minutes).padStart(2, '0') + ':' + String(seconds).padStart(2, '0');
-  }
-
-  function updateCountdowns() {
-    const now = Date.now();
-    document.querySelectorAll('[data-countdown]').forEach(el => {
-      const end = Number(el.dataset.endMs);
-      el.textContent = end ? formatRemaining(end - now) : '';
-    });
-  }
-  setInterval(updateCountdowns, 250);
-
-  // ---- Overlay files ----
+  // ---- Where an overlay comes from ----
+  //   1) a design made in the editor   (/api/overlays/{key})
+  //   2) a hand-coded file             (wwwroot/handcoded/{key}.html, kill.N falls back to kill.html)
+  //   3) a temporary placeholder card
   async function loadTemplate(key) {
-    const response = await fetch(`/handcoded/${encodeURIComponent(key)}.html`, { cache: 'no-store' });
-    if (!response.ok) {
-      const error = new Error(`No overlay file found for "${key}"`);
-      error.missing = true;
-      throw error;
+    try {
+      const designResponse = await fetch(`/api/overlays/${encodeURIComponent(key)}`, { cache: 'no-store' });
+      if (designResponse.ok) return designToHtml(await designResponse.json());
+    } catch {
+      // no design: try the hand-coded file
     }
-    return response.text();
+
+    const names = [key];
+    if (/^kill\.\d+$/.test(key)) names.push('kill');
+
+    for (const name of names) {
+      const response = await fetch(`/handcoded/${encodeURIComponent(name)}.html`, { cache: 'no-store' });
+      if (response.ok) return response.text();
+    }
+
+    const error = new Error(`No overlay file found for "${key}"`);
+    error.missing = true;
+    throw error;
   }
 
-  // Temporary card shown while an overlay has no file yet (so you can test every button)
+  // Temporary card shown while an overlay has no design and no file (so you can test every button)
   function fallbackHtml(msg) {
     const data = msg.data || {};
     const prefixes = ['event.', 'mvp.', 'result.', 'score.', 'timer.'];
     const rows = Object.entries(data)
-      .filter(([key, value]) => value && prefixes.some(p => key.startsWith(p)))
+      .filter(([key, value]) => value && !String(value).startsWith('data:') && prefixes.some(p => key.startsWith(p)))
       .slice(0, 10)
       .map(([key, value]) => `<div>${escapeHtml(key)}: ${escapeHtml(value)}</div>`)
       .join('');
@@ -102,7 +80,7 @@
       <div class="fb-key">${escapeHtml(msg.key)}</div>
       ${timer}
       ${rows}
-      <div class="fb-note">placeholder card: no file wwwroot/handcoded/${escapeHtml(msg.key)}.html yet</div>
+      <div class="fb-note">placeholder card: design "${escapeHtml(msg.key)}" in the editor or add wwwroot/handcoded/${escapeHtml(msg.key)}.html</div>
     </div>`;
   }
 

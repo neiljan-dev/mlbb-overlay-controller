@@ -11,6 +11,7 @@ public class AppDbContext : DbContext
     public DbSet<TournamentProfile> Profiles => Set<TournamentProfile>();
     public DbSet<Team> Teams => Set<Team>();
     public DbSet<Player> Players => Set<Player>();
+    public DbSet<OverlayDefinition> OverlayDefinitions => Set<OverlayDefinition>();
 
     protected override void OnConfiguring(DbContextOptionsBuilder options)
     {
@@ -43,6 +44,13 @@ public class AppDbContext : DbContext
             e.Property(p => p.Ign).HasMaxLength(40);
             e.HasOne<Team>().WithMany(t => t.Players)
                 .HasForeignKey(p => p.TeamId).OnDelete(DeleteBehavior.Cascade);
+        });
+
+        modelBuilder.Entity<OverlayDefinition>(e =>
+        {
+            e.HasIndex(o => o.Key).IsUnique();
+            e.Property(o => o.Key).IsRequired().HasMaxLength(80);
+            e.Property(o => o.DisplayName).HasMaxLength(100);
         });
     }
 }

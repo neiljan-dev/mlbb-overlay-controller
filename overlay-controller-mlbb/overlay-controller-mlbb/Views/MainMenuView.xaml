@@ -9,7 +9,11 @@
                        HorizontalAlignment="Center" Margin="0,4,0,32"/>
 
             <Button Content="Controller" FontFamily="Bahnschrift" Command="{Binding OpenControllerCommand}"
-                    Style="{StaticResource MenuButton}"/>
+                    Style="{StaticResource MenuButton}" Click="Button_Click">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
             <Button Content="Database" FontFamily="Bahnschrift" Command="{Binding OpenDatabaseCommand}"
                     Style="{StaticResource MenuButton}"/>
             <Button Content="Design x Animation" FontFamily="Bahnschrift" Command="{Binding OpenDesignCommand}"

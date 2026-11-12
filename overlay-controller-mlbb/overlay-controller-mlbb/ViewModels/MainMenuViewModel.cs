@@ -20,6 +20,5 @@ public partial class MainMenuViewModel : ObservableObject
     private void OpenDatabase() => _navigator.Navigate<DatabaseViewModel>();
 
     [RelayCommand]
-    private void OpenDesign() =>
-        _navigator.NavigateTo(new PlaceholderViewModel("Design x Animation", "Coming in Milestone 9", _navigator));
+    private void OpenDesign() => _navigator.Navigate<DesignListViewModel>();
 }

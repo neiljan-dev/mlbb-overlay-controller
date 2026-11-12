@@ -124,4 +124,42 @@ public class GameActionService
 
     /// <summary>ad3: looping ads, no timer.</summary>
     public Task Ad3Async() => _director.ShowBaseAsync("ad3", undoable: true);
+
+    // ---------- Overlay Animation panel: play any overlay with a sample player ----------
+
+    /// <summary>
+    /// Plays or replays an overlay from the Overlay Animation list. It never changes the series score
+    /// or the game state. Use test mode to fill it with dummy data.
+    /// </summary>
+    public Task PlayOverlayAsync(OverlayInfo info)
+    {
+        var blue = State.BlueIsTeam1 ? 1 : 2;
+        var red = 3 - blue;
+
+        if (info.Key.StartsWith("kill."))
+        {
+            var count = int.Parse(info.Key[5..]);
+            return KillAsync(count % 2 == 0 ? blue : red, 0, count);   // alternate sides to check the colors
+        }
+
+        return info.Key switch
+        {
+            "1.turtle" => TurtleSlainAsync(blue, 0),
+            "2.turtle" => TurtleSlainAsync(red, 0),
+            "1.lord" => LordSlainAsync(blue, 0),
+            "2.lord" => LordSlainAsync(red, 0),
+            "turtle.spawn" => TurtleSpawnAsync(),
+            "lord.spawn" => LordSpawnAsync(),
+            "1.win" or "2.win" => _director.ShowEventAsync(info.Key),
+            "result.ov" => ResultAsync(blue),
+            "mvp.ov" => MvpAsync(red, 0),
+            "ad1" => AdAsync(1, 2),
+            "ad2" => AdAsync(2, 2),
+            "ad3" => Ad3Async(),
+            _ => info.Layer == OverlayLayers.Base
+                ? _director.ShowBaseAsync(info.Key, undoable: true)
+                : _director.ShowEventAsync(info.Key)
+        };
+    }
+
 }

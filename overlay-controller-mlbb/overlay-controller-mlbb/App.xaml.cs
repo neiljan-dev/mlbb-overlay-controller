@@ -40,7 +40,9 @@ public partial class App : Application
         services.AddSingleton<HeroService>();
         services.AddSingleton<BulkImportService>();
         services.AddSingleton<ProfileService>();
+        services.AddSingleton<OverlayService>();
         services.AddSingleton<MatchStateService>();
+        services.AddSingleton<AutoSaveService>();
         services.AddSingleton<WebServerHost>();
         services.AddSingleton<ObsService>();
         services.AddSingleton<OverlayDirector>();
@@ -56,15 +58,37 @@ public partial class App : Application
         services.AddTransient<HeroSelectionViewModel>();
         services.AddTransient<GameStateViewModel>();
         services.AddTransient<ControllerSettingsViewModel>();
+        services.AddTransient<OverlayTesterViewModel>();
+        services.AddTransient<DesignListViewModel>();
 
         services.AddSingleton<MainWindow>();
         Provider = services.BuildServiceProvider();
 
+        // A saved match from last time? Offer to restore it, then start saving again.
+        var autoSave = Provider.GetRequiredService<AutoSaveService>();
+        var matchState = Provider.GetRequiredService<MatchStateService>();
+        var saved = autoSave.Load();
+        if (saved != null && saved.HasTeams())
+        {
+            var answer = MessageBox.Show(
+                "A saved match was found:\n\n" + saved.Summary() + "\n\nRestore it?",
+                "Restore match", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if (answer == MessageBoxResult.Yes) matchState.Replace(saved);
+        }
+        autoSave.Start();
+
         // Start the overlay server and the OBS connection
         var settings = Provider.GetRequiredService<SettingsService>();
         var director = Provider.GetRequiredService<OverlayDirector>();
-        _ = Provider.GetRequiredService<WebServerHost>()
-                    .StartAsync(settings.Current.ServerPort, () => director.GetSnapshot());
+        var overlays = Provider.GetRequiredService<OverlayService>();
+        var server = Provider.GetRequiredService<WebServerHost>();
+
+        // What the web server needs from the app: saved designs and sample data for the editor
+        server.DesignProvider = key => overlays.GetDesignJson(key);
+        server.SampleDataProvider = () => EditorSampleData.Create(matchState.State);
+
+        _ = server.StartAsync(settings.Current.ServerPort, () => director.GetSnapshot());
         Provider.GetRequiredService<ObsService>().Start();
 
         var window = Provider.GetRequiredService<MainWindow>();
@@ -80,6 +104,8 @@ public partial class App : Application
     {
         if (Provider != null)
         {
+            try { Provider.GetRequiredService<AutoSaveService>().SaveNow(); }
+            catch { }
             try { Task.Run(() => Provider.GetRequiredService<WebServerHost>().StopAsync()).Wait(TimeSpan.FromSeconds(3)); }
             catch { }
             try { Provider.GetRequiredService<ObsService>().Stop(); }

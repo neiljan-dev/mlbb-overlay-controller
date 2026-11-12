@@ -31,6 +31,7 @@
 	    <PrivateAssets>all</PrivateAssets>
 	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 	  </PackageReference>
+	  <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.4314.35" />
 	  <PackageReference Include="obs-websocket-dotnet" Version="5.7.0" />
 	</ItemGroup>
 

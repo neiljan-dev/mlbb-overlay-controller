@@ -14,4 +14,17 @@ public class MatchStateService
         State.Team1 = team1;
         State.Team2 = team2;
     }
+
+    /// <summary>Used at startup to restore a saved match.</summary>
+    public void Replace(MatchState state)
+    {
+        state.Normalize();
+        State = state;
+    }
+
+    /// <summary>Starts a completely new match (keeps only the selected profile).</summary>
+    public void Reset()
+    {
+        State = new MatchState { ProfileId = State.ProfileId };
+    }
 }

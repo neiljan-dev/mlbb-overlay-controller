@@ -66,6 +66,10 @@
               "target": "Package",
               "version": "[10.0.14, )"
             },
+            "Microsoft.Web.WebView2": {
+              "target": "Package",
+              "version": "[1.0.4314.35, )"
+            },
             "obs-websocket-dotnet": {
               "target": "Package",
               "version": "[5.7.0, )"

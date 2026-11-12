@@ -60,7 +60,7 @@ namespace MlbbOverlay.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Controller;V1.0.0.0;component/views/connectionwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Controller;component/views/connectionwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\ConnectionWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
