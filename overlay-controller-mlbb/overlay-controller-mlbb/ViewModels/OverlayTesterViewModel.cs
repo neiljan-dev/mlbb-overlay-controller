@@ -6,7 +6,7 @@ using MlbbOverlay.Services;
 
 namespace MlbbOverlay.ViewModels;
 
-/// <summary>Section 3 of the Controller: test mode and a Play button for every overlay.</summary>
+/// <summary>Section 3 of the Controller: test mode and a Play button for every overlay (standard and custom).</summary>
 public partial class OverlayTesterViewModel : ObservableObject, IRecipient<MatchChangedMessage>
 {
     private readonly MatchStateService _match;
@@ -14,7 +14,8 @@ public partial class OverlayTesterViewModel : ObservableObject, IRecipient<Match
     private readonly OverlayDirector _director;
     private readonly DialogService _dialogs;
 
-    public IReadOnlyList<OverlayInfo> Overlays => OverlayCatalog.All;
+    /// <summary>The standard overlays, then the ones you added in the editor.</summary>
+    public IReadOnlyList<OverlayInfo> Overlays { get; }
 
     /// <summary>Test mode: every overlay is filled with dummy data.</summary>
     public bool TestMode
@@ -32,12 +33,21 @@ public partial class OverlayTesterViewModel : ObservableObject, IRecipient<Match
     }
 
     public OverlayTesterViewModel(MatchStateService match, GameActionService actions,
-                                  OverlayDirector director, DialogService dialogs)
+                                  OverlayDirector director, DialogService dialogs,
+                                  OverlayService overlays)
     {
         _match = match;
         _actions = actions;
         _director = director;
         _dialogs = dialogs;
+
+        var list = OverlayCatalog.All.ToList();
+        foreach (var definition in overlays.GetAll())
+        {
+            if (list.All(item => item.Key != definition.Key))
+                list.Add(new OverlayInfo(definition.Key, definition.DisplayName + " (custom)", definition.Layer));
+        }
+        Overlays = list;
 
         WeakReferenceMessenger.Default.RegisterAll(this);
     }

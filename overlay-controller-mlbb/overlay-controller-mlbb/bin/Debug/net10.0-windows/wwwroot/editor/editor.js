@@ -10,6 +10,16 @@
                     n: 'ns-resize', s: 'ns-resize', e: 'ew-resize', w: 'ew-resize' };
   const HANDLES = { nw: [0, 0], n: [50, 0], ne: [100, 0], e: [100, 50], se: [100, 100], s: [50, 100], sw: [0, 100], w: [0, 50] };
 
+  // Animation presets (the names match the keyframes in design.css)
+  const IN_OUT_PRESETS = [
+    ['fade', 'Fade'], ['slideLeft', 'Slide: left edge'], ['slideRight', 'Slide: right edge'],
+    ['slideTop', 'Slide: top edge'], ['slideBottom', 'Slide: bottom edge'],
+    ['zoom', 'Zoom'], ['pop', 'Pop'], ['spin', 'Spin'], ['blur', 'Blur'], ['wipe', 'Wipe']
+  ];
+  const LOOP_PRESETS = [['pulse', 'Pulse'], ['float', 'Float'], ['glow', 'Glow'], ['shake', 'Shake'], ['spin', 'Spin'], ['blink', 'Blink']];
+  const EASINGS = [['ease-out', 'Ease out'], ['ease-in', 'Ease in'], ['ease-in-out', 'Ease in-out'],
+                   ['ease', 'Ease'], ['linear', 'Linear'], ['bounce', 'Bounce']];
+
   const key = new URLSearchParams(location.search).get('key') || '';
 
   let design = { canvas: { w: 1920, h: 1080 }, elements: [] };
@@ -19,12 +29,14 @@
   let zoom = 'fit';
   let showNames = false;
   let dirty = false;
+  let previewing = false;   // true while "Play animation" runs
   let history = [];         // snapshots, for undo
   const inputs = {};        // property name -> { input, type } of the selected element
 
   const uid = () => 'e' + Math.random().toString(36).slice(2, 8);
   const current = () => design.elements.find(e => e.id === selectedId) || null;
   const isImageKey = k => /\.(icon|splash|full|logo)$/.test(k);
+  const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 
   // ---------- Status, history ----------
   const setStatus = text => { $('status').textContent = text; };
@@ -54,7 +66,8 @@
   // ---------- Canvas ----------
   function renderStage() {
     const stage = $('stage');
-    stage.innerHTML = R.designToHtml(design, { showNames });
+    // Animations only run while "Play animation" is on, so the canvas stays still while you edit
+    stage.innerHTML = R.designToHtml(design, { showNames, animate: previewing });
     R.applyData(stage, sample);
   }
 
@@ -100,7 +113,7 @@
     const sel = $('sel');
     sel.innerHTML = '';
     const el = current();
-    if (!el) return;
+    if (!el || previewing) return;
 
     const box = document.createElement('div');
     box.className = 'selbox';
@@ -175,6 +188,7 @@
   }
 
   $('stage').addEventListener('pointerdown', e => {
+    if (previewing) return;
     const node = e.target.closest('.de');
     if (!node) { select(null); return; }
     select(node.dataset.id);
@@ -321,6 +335,17 @@
     return div;
   }
 
+  // A caption above any input (used by the animation section)
+  function labeled(text, input) {
+    const wrap = document.createElement('label');
+    wrap.className = 'field';
+    const caption = document.createElement('span');
+    caption.textContent = text;
+    wrap.appendChild(caption);
+    wrap.appendChild(input);
+    return wrap;
+  }
+
   // Refresh the numbers while dragging (but never the box you are typing in)
   function syncInputs() {
     const el = current();
@@ -330,6 +355,140 @@
     }
   }
 
+  // ---------- Animation section ----------
+  // One group: Entrance ("in"), Exit ("out") or Loop. Stored in el.anim[name] = { preset, ms, delay, easing }
+  function addAnimGroup(box, el, name, title, presets, withDelay, defaultMs, defaultEase) {
+    const head = document.createElement('div');
+    head.className = 'subhead';
+    head.textContent = title;
+    box.appendChild(head);
+
+    const saved = (el.anim && el.anim[name]) || null;
+
+    const preset = document.createElement('select');
+    [['', 'None'], ...presets].forEach(([value, label]) => {
+      const option = document.createElement('option');
+      option.value = value;
+      option.textContent = label;
+      preset.appendChild(option);
+    });
+    preset.value = saved ? saved.preset : '';
+
+    const ms = document.createElement('input');
+    ms.type = 'number';
+    ms.min = 50;
+    ms.step = 50;
+    ms.value = saved && saved.ms !== undefined ? saved.ms : defaultMs;
+
+    let delay = null;
+    if (withDelay) {
+      delay = document.createElement('input');
+      delay.type = 'number';
+      delay.min = 0;
+      delay.step = 50;
+      delay.value = saved && saved.delay !== undefined ? saved.delay : 0;
+    }
+
+    let easing = null;
+    if (defaultEase) {
+      easing = document.createElement('select');
+      EASINGS.forEach(([value, label]) => {
+        const option = document.createElement('option');
+        option.value = value;
+        option.textContent = label;
+        easing.appendChild(option);
+      });
+      easing.value = saved && saved.easing ? saved.easing : defaultEase;
+    }
+
+    const update = () => {
+      if (!preset.value) {
+        if (el.anim) {
+          delete el.anim[name];
+          if (!Object.keys(el.anim).length) delete el.anim;
+        }
+      } else {
+        el.anim = el.anim || {};
+        const cfg = { preset: preset.value, ms: Number(ms.value) || defaultMs };
+        if (delay) cfg.delay = Number(delay.value) || 0;
+        if (easing) cfg.easing = easing.value;
+        el.anim[name] = cfg;
+      }
+      dirty = true;
+      updateStatus();
+    };
+
+    const grid = group(box, 'grid2');
+    grid.appendChild(labeled('Type', preset));
+    grid.appendChild(labeled('Duration (ms)', ms));
+    if (delay) grid.appendChild(labeled('Delay (ms)', delay));
+    if (easing) grid.appendChild(labeled('Easing', easing));
+
+    preset.addEventListener('change', () => { update(); commit(); });
+    [ms, delay, easing].filter(Boolean).forEach(input => {
+      input.addEventListener('input', update);
+      input.addEventListener('change', commit);
+    });
+  }
+
+  // Copies the animation of this element to all the others, each entrance 80 ms after the previous one
+  function staggerAll(source) {
+    if (!source.anim) { setStatus('Give this element an animation first.'); return; }
+
+    design.elements.forEach((el, i) => {
+      if (el === source) return;
+      el.anim = JSON.parse(JSON.stringify(source.anim));
+      if (el.anim.in) el.anim.in.delay = i * 80;
+    });
+    commit();
+    setStatus('Animation copied to all elements. Press "Play animation" to see it.');
+  }
+
+  function renderAnimation(box, el) {
+    const title = document.createElement('h3');
+    title.textContent = 'Animation';
+    box.appendChild(title);
+
+    const hint = document.createElement('p');
+    hint.className = 'hint';
+    hint.textContent = 'Preview it with "Play animation" in the toolbar.';
+    box.appendChild(hint);
+
+    addAnimGroup(box, el, 'in', 'Entrance', IN_OUT_PRESETS, true, 500, 'ease-out');
+    addAnimGroup(box, el, 'out', 'Exit', IN_OUT_PRESETS, true, 400, 'ease-in');
+    addAnimGroup(box, el, 'loop', 'Loop (starts after the entrance)', LOOP_PRESETS, false, 1500, null);
+
+    const stagger = document.createElement('button');
+    stagger.textContent = 'Copy to all, staggered';
+    stagger.title = 'Gives every other element the same animation, each entrance 80 ms later';
+    stagger.addEventListener('click', () => staggerAll(el));
+    box.appendChild(stagger);
+  }
+
+  // Plays entrances and loops, holds a moment, then plays the exits
+  async function playAnimation() {
+    if (previewing) return;
+    previewing = true;
+    $('stage').classList.add('previewing');
+    $('btn-play').disabled = true;
+    positionSelection();           // hides the selection box
+    renderStage();                 // the entrances and loops start now
+
+    const intro = Math.max(0, ...design.elements.map(e =>
+      e.anim && e.anim.in ? (Number(e.anim.in.ms) || 500) + (Number(e.anim.in.delay) || 0) : 0));
+    await wait(intro + 1500);
+
+    const outMs = R.playOut($('stage'));
+    await wait(outMs + 500);
+
+    previewing = false;
+    $('stage').classList.remove('previewing');
+    $('btn-play').disabled = false;
+    renderStage();
+    positionSelection();
+  }
+
+  // ---------- Properties panel ----------
   function renderProps() {
     const box = $('props');
     box.innerHTML = '';
@@ -397,6 +556,8 @@
       addField(d, 'UPPERCASE', 'uppercase', 'checkbox');
       addField(d, 'Shadow', 'shadow', 'checkbox');
     }
+
+    renderAnimation(box, el);
   }
 
   // ---------- Adding elements ----------
@@ -557,6 +718,7 @@
   $('file').addEventListener('change', e => { uploadFiles([...e.target.files]); e.target.value = ''; });
   $('btn-rect').addEventListener('click', newRect);
   $('btn-text').addEventListener('click', () => newText());
+  $('btn-play').addEventListener('click', playAnimation);
   $('ph-filter').addEventListener('input', renderPlaceholders);
 
   $('zoom').addEventListener('change', e => { zoom = e.target.value; applyZoom(); });
@@ -571,6 +733,8 @@
   });
 
   window.addEventListener('keydown', e => {
+    if (previewing) return;
+
     const tag = (e.target.tagName || '').toLowerCase();
     const typing = tag === 'input' || tag === 'textarea' || tag === 'select';
 

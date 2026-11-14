@@ -1,4 +1,4 @@
-// Turns a design (JSON from the editor) into HTML, and fills placeholders.
+// Turns a design (JSON from the editor) into HTML, fills placeholders and plays exit animations.
 // Used by the overlay page (OBS) and by the editor, so both look identical.
 (() => {
   'use strict';
@@ -8,6 +8,12 @@
 
   const num = (value, fallback) => (typeof value === 'number' && isFinite(value) ? value : fallback);
 
+  // Animation names are letters only (they become CSS names like dzin-slideLeft)
+  const word = s => (/^[A-Za-z]+$/.test(s || '') ? s : '');
+
+  const EASING = { bounce: 'cubic-bezier(0.34, 1.56, 0.64, 1)' };
+  const ease = (name, fallback) => EASING[name] || (/^[a-z-]+$/.test(name || '') ? name : fallback);
+
   function rgba(hex, alpha) {
     const m = /^#?([0-9a-f]{6})$/i.exec(hex || '');
     if (!m) return hex || 'transparent';
@@ -15,14 +21,20 @@
     return `rgba(${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255}, ${alpha})`;
   }
 
-  // Position, size and look of one element
-  function boxStyle(el) {
+  // Outer frame: position, size, rotation, opacity (never animated)
+  function frameStyle(el) {
     const s = [
       `left:${num(el.x, 0)}px`, `top:${num(el.y, 0)}px`,
       `width:${num(el.w, 100)}px`, `height:${num(el.h, 100)}px`,
       `opacity:${num(el.opacity, 1)}`
     ];
     if (el.rotation) s.push(`transform:rotate(${num(el.rotation, 0)}deg)`);
+    return s.join(';');
+  }
+
+  // Visual box: background, corners, border
+  function visualStyle(el) {
+    const s = [];
     if (el.type === 'rect') s.push(`background:${esc(rgba(el.fill || '#1f2430', num(el.fillAlpha, 1)))}`);
     if (el.radius) s.push(`border-radius:${num(el.radius, 0)}px`);
     if (el.borderWidth) s.push(`border:${num(el.borderWidth, 0)}px solid ${esc(el.borderColor || '#ffffff')}`);
@@ -67,15 +79,73 @@
       case 'text':
         return textHtml(el, showNames);
       default:
-        return '';   // "rect" is drawn by the box itself
+        return '';   // "rect" is drawn by the visual box itself
     }
   }
 
+  // ---- Animations ----
+  function inStyle(cfg) {
+    const preset = word(cfg.preset);
+    if (!preset) return '';
+    return `animation:dzin-${preset} ${num(cfg.ms, 500)}ms ${ease(cfg.easing, 'ease-out')} ${num(cfg.delay, 0)}ms backwards`;
+  }
+
+  // A loop starts when the entrance is finished
+  function loopStyle(cfg, inCfg) {
+    const preset = word(cfg.preset);
+    if (!preset) return '';
+    const start = inCfg && word(inCfg.preset) ? num(inCfg.ms, 500) + num(inCfg.delay, 0) : 0;
+    const easing = preset === 'spin' ? 'linear' : 'ease-in-out';
+    return `animation:dzloop-${preset} ${num(cfg.ms, 1500)}ms ${easing} ${start}ms infinite`;
+  }
+
+  // .da = entrance and exit, .dl = loop, so the two never fight over the same CSS property
+  function wrapAnimation(el, visualHtml, opts) {
+    const anim = opts && opts.animate === false ? null : el.anim;
+    const intro = anim && anim.in ? inStyle(anim.in) : '';
+    const loop = anim && anim.loop ? loopStyle(anim.loop, anim.in) : '';
+
+    let out = '';
+    if (anim && anim.out && word(anim.out.preset)) {
+      out = ` data-out="${word(anim.out.preset)}" data-out-ms="${num(anim.out.ms, 400)}"` +
+            ` data-out-delay="${num(anim.out.delay, 0)}" data-out-ease="${esc(ease(anim.out.easing, 'ease-in'))}"`;
+    }
+
+    return `<div class="da"${out}${intro ? ` style="${intro}"` : ''}>` +
+           `<div class="dl"${loop ? ` style="${loop}"` : ''}>${visualHtml}</div></div>`;
+  }
+
   // The whole design as HTML. Later elements are in front of earlier ones.
+  // opts.animate === false -> no animations (the editor while you work)
   function designToHtml(design, opts) {
-    const items = ((design && design.elements) || []).map(el =>
-      `<div class="de de-${esc(el.type)}" data-id="${esc(el.id)}" style="${boxStyle(el)}">${elementHtml(el, opts)}</div>`);
+    const items = ((design && design.elements) || []).map(el => {
+      const visual = `<div class="db" style="${visualStyle(el)}">${elementHtml(el, opts)}</div>`;
+      return `<div class="de de-${esc(el.type)}" data-id="${esc(el.id)}" style="${frameStyle(el)}">` +
+             `${wrapAnimation(el, visual, opts)}</div>`;
+    });
     return `<div class="dz">${items.join('')}</div>`;
+  }
+
+  // Starts the exit animations inside root. Returns how long they take in ms (0 = the design has none).
+  function playOut(root) {
+    const nodes = [...root.querySelectorAll('.da')];
+    const withOut = nodes.filter(n => n.dataset.out);
+    if (!withOut.length) return 0;
+
+    const total = n => (Number(n.dataset.outMs) || 0) + (Number(n.dataset.outDelay) || 0);
+    const longest = Math.max(...withOut.map(total));
+    const FADE = 250;
+
+    nodes.forEach(n => {
+      if (n.dataset.out) {
+        n.style.animation = `dzout-${n.dataset.out} ${Number(n.dataset.outMs) || 400}ms ` +
+                            `${n.dataset.outEase || 'ease-in'} ${Number(n.dataset.outDelay) || 0}ms both`;
+      } else {
+        // elements without an exit animation fade out at the end
+        n.style.animation = `dzout-fade ${FADE}ms ease-in ${Math.max(0, longest - FADE)}ms both`;
+      }
+    });
+    return longest;
   }
 
   // ---- Placeholders ----
@@ -146,5 +216,5 @@
   }
   setInterval(updateCountdowns, 250);
 
-  window.OverlayRenderer = { designToHtml, applyData, updateCountdowns };
+  window.OverlayRenderer = { designToHtml, applyData, updateCountdowns, playOut };
 })();

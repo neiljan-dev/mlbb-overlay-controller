@@ -26,7 +26,7 @@
     setDebug('renderer.js is missing (see wwwroot/overlay)', true);
     return;
   }
-  const { designToHtml, applyData } = window.OverlayRenderer;
+  const { designToHtml, applyData, playOut } = window.OverlayRenderer;
 
   // Scale the 1920x1080 canvas to the window (scale = 1 in a 1920x1080 OBS source)
   function fit() {
@@ -111,6 +111,10 @@
     const el = document.createElement('div');
     el.className = 'ov';
     el.innerHTML = html;
+
+    // A design with entrance animations plays its own, so skip the default fade-in of the whole overlay
+    if (el.querySelector('.da[style*="dzin-"]')) el.classList.add('ov-plain');
+
     applyData(el, msg.data || {});
     (layers[msg.layer] || layers.event).appendChild(el);
     shown.set(msg.id, { el, msg });
@@ -121,8 +125,15 @@
     if (!item) { cancelled.add(id); return; }
     shown.delete(id);
     if (instant) { item.el.remove(); return; }
-    item.el.classList.add('leaving');
-    setTimeout(() => item.el.remove(), 450);
+
+    // Exit animations of a design; without them, the default fade of the whole overlay
+    const outMs = playOut(item.el);
+    if (outMs > 0) {
+      setTimeout(() => item.el.remove(), outMs + 80);
+    } else {
+      item.el.classList.add('leaving');
+      setTimeout(() => item.el.remove(), 450);
+    }
   }
 
   function hideAll(instant) {

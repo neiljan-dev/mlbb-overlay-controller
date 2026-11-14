@@ -1,4 +1,5 @@
-﻿using MlbbOverlay.Models;
+﻿using System.Text.Json;
+using MlbbOverlay.Models;
 
 namespace MlbbOverlay.Services;
 
@@ -207,7 +208,7 @@ public class OverlayDirector
             // One after another: a short pause so the fade-out finishes. Replace mode goes straight on.
             if (more && _settings.Current.QueueMode == QueueMode.Sequential)
             {
-                try { await Task.Delay(GapMs); }
+                try { await Task.Delay(Math.Max(GapMs, OutDurationMs(item.Key) + 50)); }
                 catch { }
             }
         }
@@ -293,5 +294,36 @@ public class OverlayDirector
         cut?.Cancel();
         if (showAgain != null) await ShowBaseCoreAsync(showAgain);
         else if (hideBase) await HideBaseAsync();
+
+    }
+
+
+            /// <summary>How long the exit animations of a designed overlay take (0 if it has none). Used for the queue pause.</summary>
+    private int OutDurationMs(string key)
+    {
+        try
+        {
+            var json = _server.DesignProvider?.Invoke(key);
+            if (json == null) return 0;
+
+            using var doc = JsonDocument.Parse(json);
+            if (!doc.RootElement.TryGetProperty("elements", out var elements)) return 0;
+
+            var longest = 0.0;
+            foreach (var element in elements.EnumerateArray())
+            {
+                if (!element.TryGetProperty("anim", out var anim) || anim.ValueKind != JsonValueKind.Object) continue;
+                if (!anim.TryGetProperty("out", out var exit) || exit.ValueKind != JsonValueKind.Object) continue;
+
+                var ms = exit.TryGetProperty("ms", out var m) && m.TryGetDouble(out var mv) ? mv : 400;
+                var delay = exit.TryGetProperty("delay", out var d) && d.TryGetDouble(out var dv) ? dv : 0;
+                longest = Math.Max(longest, ms + delay);
+            }
+            return (int)longest;
+        }
+        catch
+        {
+            return 0;
+        }
     }
 }

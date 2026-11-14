@@ -1,73 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Overlay editor</title>
-  <link rel="stylesheet" href="/overlay/design.css">
-  <link rel="stylesheet" href="/editor/editor.css">
+	<head>
+		<meta charset="utf-8">
+			<title>Overlay editor</title>
+			<link rel="stylesheet" href="/overlay/design.css">
+				<link rel="stylesheet" href="/editor/editor.css">
 </head>
-<body>
-<div id="app">
+	<body>
+		<div id="app">
 
-  <!-- Left: add elements, the list of elements, uploaded images -->
-  <aside id="left">
-    <h3>Add</h3>
-    <div class="btns">
-      <button id="btn-image">Image...</button>
-      <button id="btn-rect">Rectangle</button>
-      <button id="btn-text">Text</button>
-    </div>
-    <input type="file" id="file" accept="image/*" multiple hidden>
-    <p class="hint">Tip: drag a PNG from Explorer onto the canvas.</p>
+			<!-- Left: add elements, the list of elements, uploaded images -->
+			<aside id="left">
+				<h3>Add</h3>
+				<div class="btns">
+					<button id="btn-image">Image...</button>
+					<button id="btn-rect">Rectangle</button>
+					<button id="btn-text">Text</button>
+				</div>
+				<input type="file" id="file" accept="image/*" multiple="" hidden="">
+					<p class="hint">Tip: drag a PNG from Explorer onto the canvas.</p>
 
-    <h3>Elements</h3>
-    <p class="hint">Top of the list = in front.</p>
-    <div id="layers"></div>
+					<h3>Elements</h3>
+					<p class="hint">Top of the list = in front.</p>
+					<div id="layers"></div>
 
-    <h3>Images</h3>
-    <div id="assets"></div>
-  </aside>
+					<h3>Images</h3>
+					<div id="assets"></div>
+				</aside>
 
-  <!-- Center: the 1920x1080 canvas -->
-  <main id="center">
-    <div id="toolbar">
-      <label>Zoom
-        <select id="zoom">
-          <option value="fit">Fit</option>
-          <option value="0.25">25%</option>
-          <option value="0.5">50%</option>
-          <option value="0.75">75%</option>
-          <option value="1">100%</option>
-        </select>
-      </label>
-      <label><input type="checkbox" id="chk-names"> Show placeholder names</label>
-      <label><input type="checkbox" id="chk-guides"> Guides</label>
-      <span id="status"></span>
-    </div>
-    <div id="viewport">
-      <div id="scaler">
-        <div id="wrap">
-          <div id="stage"></div>
-          <div id="sel"></div>
-        </div>
-      </div>
-    </div>
-  </main>
+			<!-- Center: the 1920x1080 canvas -->
+			<main id="center">
+				<div id="toolbar">
+					<label>
+						Zoom
+						<select id="zoom">
+							<option value="fit">Fit</option>
+							<option value="0.25">25%</option>
+							<option value="0.5">50%</option>
+							<option value="0.75">75%</option>
+							<option value="1">100%</option>
+						</select>
+					</label>
+					<label>
+						<input type="checkbox" id="chk-names"> Show placeholder names
+					</label>
+					<label>
+						<input type="checkbox" id="chk-guides"> Guides
+					</label>
+					<button id="btn-play">Play animation</button>
+					<span id="status"></span>
+				</div>
+				<div id="viewport">
+					<div id="scaler">
+						<div id="wrap">
+							<div id="stage"></div>
+							<div id="sel"></div>
+						</div>
+					</div>
+				</div>
+			</main>
 
-  <!-- Right: properties and placeholders -->
-  <aside id="right">
-    <h3>Properties</h3>
-    <div id="props"></div>
+			<!-- Right: properties and placeholders -->
+			<aside id="right">
+				<h3>Properties</h3>
+				<div id="props"></div>
 
-    <h3>Placeholders</h3>
-    <p class="hint">Click one to add it. With a matching element selected, it is applied to that element.</p>
-    <input id="ph-filter" placeholder="Search placeholders...">
-    <div id="phs"></div>
-  </aside>
+				<h3>Placeholders</h3>
+				<p class="hint">Click one to add it. With a matching element selected, it is applied to that element.</p>
+				<input id="ph-filter" placeholder="Search placeholders...">
+					<div id="phs"></div>
+				</aside>
 
-</div>
+		</div>
 
-<script src="/overlay/renderer.js"></script>
-<script src="/editor/editor.js"></script>
-</body>
+		<script src="/overlay/renderer.js"></script>
+		<script src="/editor/editor.js"></script>
+	</body>
 </html>

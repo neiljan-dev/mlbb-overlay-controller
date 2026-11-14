@@ -72,3 +72,12 @@ textarea { resize: vertical; }
 .phg { margin: 12px 0 4px; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #8a91a3; }
 .ph { display: block; width: 100%; margin-bottom: 3px; padding: 3px 8px; text-align: left; font-size: 12px; }
 .ph.img { border-left: 3px solid #f5a623; }
+
+/* Animation section of the properties */
+.subhead { margin: 12px 0 6px; font-size: 12px; font-weight: 600; color: #cfd4e0; }
+#props h3 { margin-top: 18px; }
+#props > button { width: 100%; margin-top: 4px; }
+button:disabled { opacity: 0.5; cursor: default; }
+
+/* While "Play animation" runs, the canvas can't be clicked */
+#stage.previewing { pointer-events: none; }
